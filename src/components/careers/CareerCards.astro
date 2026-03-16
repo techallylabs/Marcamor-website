@@ -1,0 +1,89 @@
+---
+import { jobs } from "../../data/jobs.js"
+
+const bag="/icons/bag.svg"
+const profile="/icons/pro.svg"
+const map="/icons/map.svg"
+---
+
+<section class="py-8 lg:py-16 bg-[#FFF9F6]">
+
+<div class="max-w-[1440px] w-[90%] mx-auto">
+
+<div class="text-center flex flex-col gap-6 items-center">
+
+<h1 class="text-[32px] sm:text-[42px] md:text-[52px] lg:text-[60px] font-semibold bg-gradient-to-r from-[#E51F31] to-[#EE5125] bg-clip-text text-transparent">
+
+Join Our Team
+
+</h1>
+
+<p class="text-black font-medium max-w-[780px]">
+
+At Marcamor, we bring together strategists, creators, technologists, and analysts who are passionate about building meaningful digital ecosystems.
+
+</p>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 mt-10">
+
+{jobs.map((job: typeof jobs[number])=> (
+
+<div class="bg-[#0000000D] rounded-[14px] lg:p-6 p-4">
+
+<div class="flex justify-between items-start gap-4">
+
+<h2 class="text-[24px] font-semibold text-black">
+{job.title}
+</h2>
+
+<a
+href={`/careers/${job.slug}`}
+class="bg-gradient-to-r from-[#E51F31] to-[#EE5125] text-white text-sm px-5 py-2 rounded-full font-medium hover:opacity-90 transition"
+>
+
+APPLY NOW
+
+</a>
+
+</div>
+
+<div class="flex flex-wrap items-center gap-2 mt-4">
+
+<div class="flex items-center gap-2 bg-[#0000001A] px-3 py-1.5 rounded-[8px] text-sm">
+
+<img src={bag} class="w-[16px]" />
+<span>{job.type}</span>
+
+</div>
+
+<div class="flex items-center gap-2 bg-[#0000001A] px-3 py-1.5 rounded-[8px] text-sm">
+
+<img src={profile} class="w-[16px]" />
+<span>{job.experience}</span>
+
+</div>
+
+<div class="flex items-center gap-2 bg-[#0000001A] px-3 py-1.5 rounded-[8px] text-sm">
+
+<img src={map} class="w-[16px]" />
+<span>{job.location}</span>
+
+</div>
+
+</div>
+
+<p class="mt-4 text-black/70 text-sm">
+{job.dec}
+</p>
+
+</div>
+
+))}
+
+</div>
+
+</div>
+
+</section>

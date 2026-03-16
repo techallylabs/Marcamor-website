@@ -1,0 +1,44 @@
+---
+const services = [
+  "Brand Strategy",
+  "Logo Design",
+  "Brand Identity and Guidelines",
+  "Packaging Design",
+  "Corporate Communication Design",
+  "UI UX Design",
+ 
+];
+---
+
+<section class="bg-black text-white py-16 lg:py-24">
+
+  <div class="max-w-[1440px] mx-auto w-[90%] flex flex-col items-center text-center gap-8">
+
+    <!-- Top Label -->
+    <span
+      class="uppercase text-[13px] font-medium px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md"
+    >
+      Our Services
+    </span>
+
+    <!-- Heading -->
+    <h1 class="text-[28px] sm:text-[36px] lg:text-[48px] max-w-[1100px] font-semibold ">
+     Creative branding and design solutions that  build strong, memorable brand identity.
+    </h1>
+
+    <!-- Tags -->
+    <div class="flex flex-wrap justify-center gap-3 ">
+
+      {services.map((service) => (
+        <span
+          class="text-[13px] px-4 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition cursor-pointer"
+        >
+          {service}
+        </span>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>

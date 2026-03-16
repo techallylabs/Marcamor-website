@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import YoutubeHero from "../../../components/services/youtube-marketing/YoutubeHero.astro";
+import YoutubeMarquee from "../../../components/services/youtube-marketing/Marquee.astro";
+import YoutubeServices from "../../../components/services/youtube-marketing/OurServices.astro";
+import YoutubeStrategy from "../../../components/services/youtube-marketing/TurningStrategy.astro";
+import YoutubeCategory from "../../../components/services/youtube-marketing/Category.jsx";
+import YoutubeWhyChoose from "../../../components/services/youtube-marketing/WhyChooseMarcamor.astro";
+import YoutubeFaq from "../../../components/services/youtube-marketing/YoutubeFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="YouTube Marketing Services">
+
+<YoutubeHero />
+
+<YoutubeMarquee />
+
+<YoutubeServices />
+
+<YoutubeStrategy />
+
+<YoutubeCategory client:load />
+
+<YoutubeWhyChoose />
+
+<YoutubeFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

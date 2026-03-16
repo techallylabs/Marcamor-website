@@ -1,0 +1,110 @@
+---
+const pdfIcon = "/icons/resume-picker.svg"
+const pdf = "/icons/pdf-logo.svg"
+---
+
+<div>
+  <label class="block text-sm font-medium mb-2">
+    Resume / CV <span class="text-[#EE5125] ml-1">*</span>
+  </label>
+
+  <div class="relative">
+
+    <!-- Hidden Input -->
+    <input
+      id="resumeInput"
+      type="file"
+      class="absolute inset-0 opacity-0 cursor-pointer z-10"
+    />
+
+    <!-- Upload Box -->
+    <div
+      id="uploadBox"
+      class="border border-dashed border-black/30 rounded-[10px] p-8 text-center bg-[#00000008]"
+    >
+
+      <!-- Default State -->
+      <div id="uploadDefault">
+        <div class="flex justify-center mb-4">
+          <div class="w-[54px] h-[54px] flex items-center justify-center rounded-lg">
+            <img src={pdfIcon} />
+          </div>
+        </div>
+
+        <p class="text-sm text-black/70">
+          Drag & Drop or Click to Upload
+        </p>
+
+        <p class="text-xs mt-2 text-black/50">
+          PDF, DOC up to 5MB
+        </p>
+      </div>
+
+      <!-- File Selected State -->
+      <div id="uploadSuccess" class="hidden">
+
+        <div class="flex justify-center mb-4">
+          <img src={pdf} class="w-[54px] h-[54px]" />
+        </div>
+
+        <p id="fileName" class="text-sm text-black/70"></p>
+
+        <button
+          id="changeFile"
+          type="button"
+          class="mt-3 text-sm underline text-black"
+        >
+          Change File
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+
+const input = document.getElementById("resumeInput")
+const defaultUI = document.getElementById("uploadDefault")
+const successUI = document.getElementById("uploadSuccess")
+const fileName = document.getElementById("fileName")
+const changeBtn = document.getElementById("changeFile")
+
+input.addEventListener("change",(e)=>{
+
+  const file = e.target.files[0]
+  if(!file) return
+
+  const allowedTypes=[
+    "application/pdf",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+  ]
+
+  if(!allowedTypes.includes(file.type)){
+    alert("Only PDF or DOC files allowed")
+    input.value=""
+    return
+  }
+
+  if(file.size > 5 * 1024 * 1024){
+    alert("File must be under 5MB")
+    input.value=""
+    return
+  }
+
+  fileName.textContent=file.name
+
+  defaultUI.classList.add("hidden")
+  successUI.classList.remove("hidden")
+
+})
+
+changeBtn?.addEventListener("click",()=>{
+  input.value=""
+  successUI.classList.add("hidden")
+  defaultUI.classList.remove("hidden")
+})
+
+</script>

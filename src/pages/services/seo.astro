@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SeoCom from "../../components/services/digitalmarketing/SeoCom.jsx";
+import SeoMarquee from "../../components/services/digitalmarketing/SeoMarquee.astro";
+import OurServices from "../../components/services/digitalmarketing/OurServices.astro"
+import TurningStrategy from "../../components/services/digitalmarketing/TurningStrategy.astro"
+import Category from "../../components/services/digitalmarketing/Category.jsx"
+import WhychooseMarcamore from "../../components/services/digitalmarketing/WhyChooseMarcamor.astro"
+import SeoFaq from "../../components/services/digitalmarketing/SeoFaq.jsx"
+
+import FooterSection from "../../components/FooterSection.astro";
+import ContactUs from "../../components/ContactUs.astro";
+---
+
+<Layout title="Digital Marketing">
+  <div class="bg-black min-h-screen">
+    <SeoCom client:load />
+    
+     <SeoMarquee /> 
+     <OurServices />
+     
+      <TurningStrategy/>
+      <Category client:load/>
+      <WhychooseMarcamore/>
+     
+      <SeoFaq client:load/>  
+      <ContactUs/>
+      <FooterSection/>
+  </div>
+</Layout>

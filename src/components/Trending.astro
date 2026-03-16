@@ -1,0 +1,153 @@
+---
+const cards = [
+{
+image:"/images/insights1.svg",
+title:"Why Strong Brand Positioning Matters More Than Marketing Spend",
+type:" Marketing",
+date:" mar 07, 2025",
+time:"4 MIN",
+dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+}
+]
+
+const cards1 = [
+{
+image:"/images/insights2.svg",
+title:"The Rise of Performance Driven Marketing in Modern Businesses",
+type:" Marketing",
+date:" mar 07, 2025",
+time:"4 MIN",
+dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+},
+{
+image:"/images/insights3.svg",
+title:"Why Companies Are Investing More in Brand Strategy",
+type:" Business",
+date:" mar 07, 2025",
+time:"4 MIN",
+dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+},
+{
+image:"/images/insights4.svg",
+title:"How AI Is Changing Digital Marketing Workflows",
+type:" Technology",
+date:" mar 07, 2025",
+time:"4 MIN",
+dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+},
+{
+image:"/images/insights9.svg",
+title:"Why Customer Experience Is Becoming the Real Competitive Advantage",
+type:" Business",
+date:" mar 07, 2025",
+time:"4 MIN",
+dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+}
+]
+---
+
+<section class="bg-black text-white py-[60px] mt-20">
+
+<div class="max-w-[1440px] mx-auto w-[90%]">
+
+<div class="flex flex-col lg:flex-row justify-center gap-12 lg:gap-[76px]">
+
+
+<div class="w-full lg:w-[745px]">
+
+{cards.map((item)=>(
+<div>
+
+<div class="w-full h-[240px] sm:h-[320px] lg:h-[410px] rounded-2xl">
+
+<img src={item.image} alt={item.image} class="rounded-[10px]" />
+
+</div>
+
+<div class="flex flex-wrap items-center gap-3 mt-6 text-sm font-semibold">
+
+<span class="bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-xs uppercase">
+{item.type}
+</span>
+
+<span class="flex items-center gap-2 bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-xs text-white/70">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+<circle cx="7" cy="7" r="6"/>
+<path d="M7 3v4l2 2"/>
+</svg>
+
+{item.time}
+
+</span>
+
+<span class="flex items-center uppercase gap-2 bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-xs text-white/70">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+<rect x="2" y="3" width="10" height="9" rx="2"/>
+<path d="M2 6h10"/>
+</svg>
+
+{item.date}
+
+</span>
+
+</div>
+
+
+<h2 class="text-[18px] font-semibold mt-4 leading-snug">
+{item.title}
+</h2>
+
+
+<p class="text-[#FFFFFF80] text-[14px] mt-4 leading-relaxed">
+{item.dec}
+</p>
+
+</div>
+))}
+
+</div>
+
+
+<div class="hidden lg:block w-px bg-white/10"></div>
+
+
+<div class="w-full lg:w-[600px]">
+
+<h3 class="text-sm tracking-wider text-white/50 mb-6">
+TRENDING
+</h3>
+
+
+{cards1.map((ele)=>(
+<div class="flex gap-4 mb-8">
+
+<div class="w-[130px] rounded-lg flex-shrink-0">
+
+<img src={ele.image} class="rounded-[10px]" />
+
+</div>
+
+<div>
+
+<span class="bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-[10px] uppercase font-semibold">
+{ele.type}
+</span>
+
+<h4 class="text-[14px] font-semibold mt-3 leading-snug">
+{ele.title}
+</h4>
+
+</div>
+
+</div>
+))}
+
+</div>
+
+</div>
+
+</div>
+
+</section>

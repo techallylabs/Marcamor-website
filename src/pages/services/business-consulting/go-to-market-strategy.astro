@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import GtmHero from "../../../components/services/go-to-market-strategy/GtmHero.astro";
+import GtmMarquee from "../../../components/services/go-to-market-strategy/Marquee.astro";
+import GtmServices from "../../../components/services/go-to-market-strategy/OurServices.astro";
+import GtmStrategy from "../../../components/services/go-to-market-strategy/TurningStrategy.astro";
+import GtmCategory from "../../../components/services/go-to-market-strategy/Category.jsx";
+import GtmWhyChoose from "../../../components/services/go-to-market-strategy/WhyChooseMarcamor.astro";
+import GtmFaq from "../../../components/services/go-to-market-strategy/GtmFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Go To Market Strategy Consulting">
+
+<GtmHero />
+
+<GtmMarquee />
+
+<GtmServices />
+
+<GtmStrategy />
+
+<GtmCategory client:load />
+
+<GtmWhyChoose />
+
+<GtmFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

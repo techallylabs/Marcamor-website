@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import EmailHero from "../../../components/services/email-marketing/EmailHero.astro";
+import EmailMarquee from "../../../components/services/email-marketing/Marquee.astro";
+import EmailServices from "../../../components/services/email-marketing/OurServices.astro";
+import EmailStrategy from "../../../components/services/email-marketing/TurningStrategy.astro";
+import EmailCategory from "../../../components/services/email-marketing/Category.jsx";
+import EmailWhyChoose from "../../../components/services/email-marketing/WhyChooseMarcamor.astro";
+import EmailFaq from "../../../components/services/email-marketing/EmailFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Email Marketing Services">
+
+<EmailHero />
+
+<EmailMarquee />
+
+<EmailServices />
+
+<EmailStrategy />
+
+<EmailCategory client:load />
+
+<EmailWhyChoose />
+
+<EmailFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

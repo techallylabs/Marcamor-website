@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import InfluencerHero from "../../../components/services/influencer-marketing/InfluencerHero.astro";
+import InfluencerMarquee from "../../../components/services/influencer-marketing/Marquee.astro";
+import InfluencerServices from "../../../components/services/influencer-marketing/OurServices.astro";
+import InfluencerStrategy from "../../../components/services/influencer-marketing/TurningStrategy.astro";
+import InfluencerCategory from "../../../components/services/influencer-marketing/Category.jsx";
+import InfluencerWhyChoose from "../../../components/services/influencer-marketing/WhyChooseMarcamor.astro";
+import InfluencerFaq from "../../../components/services/influencer-marketing/InfluencerFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Influencer Marketing Services">
+
+<InfluencerHero />
+
+<InfluencerMarquee />
+
+<InfluencerServices />
+
+<InfluencerStrategy />
+
+<InfluencerCategory client:load />
+
+<InfluencerWhyChoose />
+
+<InfluencerFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

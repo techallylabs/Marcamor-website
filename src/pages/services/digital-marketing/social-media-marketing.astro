@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import SocialHero from "../../../components/services/social-media-marketing/SocialHero.astro";
+import SocialMarquee from "../../../components/services/social-media-marketing/Marquee.astro";
+import SocialServices from "../../../components/services/social-media-marketing/OurServices.astro";
+import SocialStrategy from "../../../components/services/social-media-marketing/TurningStrategy.astro";
+import SocialCategory from "../../../components/services/social-media-marketing/Category.jsx";
+import SocialWhyChoose from "../../../components/services/social-media-marketing/WhyChooseMarcamor.astro";
+import SocialFaq from "../../../components/services/social-media-marketing/SocialFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Social Media Marketing Services">
+
+  <SocialHero />
+
+  <SocialMarquee />
+
+  <SocialServices />
+
+  <SocialStrategy />
+
+  <SocialCategory client:load />
+
+  <SocialWhyChoose />
+
+  <SocialFaq client:load />
+
+  <ContactUs />
+
+  <FooterSection />
+
+</Layout>

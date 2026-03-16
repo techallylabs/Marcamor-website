@@ -1,11 +1,30 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import AwardWinning from "../components/AwardWinning.astro";
+import MarcamorCreatives from "../components/MarcamorCreatives.astro";
+import FeaturedWork from "../components/FeaturedWork.astro";
+import Industries from "../components/Industries.astro";
+import Clients from "../components/Clients.astro";
+import Fqa from "../components/Fqa.astro";
+import Trending from "../components/Trending.astro";
+import Testimonials from "../components/Testimonials.astro";
+import ContactUs from "../components/ContactUs.astro"
+import FooterSection from "../components/FooterSection.astro"
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Marcamor">
+
+<AwardWinning />
+
+<MarcamorCreatives />
+<Clients/>
+<FeaturedWork/>
+<Industries/>
+
+<Fqa/>
+<Trending/>
+<Testimonials/>
+<ContactUs/>
+<FooterSection/>
 </Layout>

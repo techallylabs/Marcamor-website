@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import ContentHero from "../../../components/services/content-marketing/ContentHero.astro";
+import ContentMarquee from "../../../components/services/content-marketing/Marquee.astro";
+import ContentServices from "../../../components/services/content-marketing/OurServices.astro";
+import ContentStrategy from "../../../components/services/content-marketing/TurningStrategy.astro";
+import ContentCategory from "../../../components/services/content-marketing/Category.jsx";
+import ContentWhyChoose from "../../../components/services/content-marketing/WhyChooseMarcamor.astro";
+import ContentFaq from "../../../components/services/content-marketing/ContentFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Content Marketing Services">
+
+<ContentHero />
+
+<ContentMarquee />
+
+<ContentServices />
+
+<ContentStrategy />
+
+<ContentCategory client:load />
+
+<ContentWhyChoose />
+
+<ContentFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

@@ -1,0 +1,304 @@
+---
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  ChevronRight
+} from "lucide-react";
+
+const footerBg = "/images/footerimage.png";
+const footerMobileBg = "/images/footerMobileBg.png";
+---
+
+<footer class="relative w-full text-white">
+
+<div
+class="absolute inset-0 bg-cover block lg:hidden"
+style={`background-image:url(${footerMobileBg})`}
+></div>
+
+<div
+class="absolute inset-0 bg-cover bg-center hidden lg:block"
+style={`background-image:url(${footerBg})`}
+></div>
+
+<div class="relative max-w-[1440px] mx-auto w-[90%] pt-[90px] pb-[50px]">
+
+
+<!-- Top section -->
+<div class="flex flex-col lg:flex-row justify-between gap-12">
+
+<div class="space-y-12">
+
+<div class="flex flex-wrap lg:flex-nowrap gap-6">
+
+<img src="/images/marcamore-logo.svg" class="w-[212px] h-[48px]" />
+
+<div class="relative">
+
+<img src="/images/marcamore-logo.svg" class="w-[140px] h-[32px]" />
+
+<img
+src="/images/insight-logo.svg"
+class="w-[122px] h-[68px] absolute -bottom-8 left-1/2 -translate-x-1/2"
+/>
+
+</div>
+
+<img src="/images/star-logo.svg" class="w-[108px] h-[52px] hidden" />
+
+</div>
+
+<p class="text-[17px] font-medium leading-relaxed">
+We are Marcamor, a media company and an award-winning <br />
+marketing and web design agency.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Social + Locations -->
+<div class="w-full flex flex-col lg:flex-row lg:items-center lg:justify-between flex-wrap mt-10">
+
+<div class="flex flex-col">
+
+<p class="text-[17px] mb-4 font-semibold">Follow Us:</p>
+
+<div class="flex gap-4">
+
+<div class="w-10 h-10 rounded-full border border-[#8a8381] flex items-center justify-center">
+<Facebook size={20} />
+</div>
+
+<div class="w-10 h-10 rounded-full border border-[#8a8381] flex items-center justify-center">
+<Instagram size={20} />
+</div>
+
+<div class="w-10 h-10 rounded-full border border-[#8a8381] flex items-center justify-center">
+<Linkedin size={20} />
+</div>
+
+</div>
+
+</div>
+
+
+<div class="flex flex-wrap items-center gap-10 lg:mt-0 mt-4">
+
+<div class="flex items-center gap-3 min-w-[220px]">
+
+<img src="/icons/india.svg" class="w-[38px] h-[38px]" />
+
+<div class="flex flex-col">
+
+<p class="font-semibold text-[14px]">India</p>
+<p class="text-[13px]">
+Hyderabad, Telangana 500081.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="flex items-center gap-3 min-w-[250px]">
+
+<img src="/icons/usa.svg" class="w-[38px] h-[38px]" />
+
+<div class="flex flex-col">
+
+<p class="font-semibold text-[14px]">United States</p>
+<p class="text-[13px]">
+San Francisco, California 94108.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="flex items-center gap-3 min-w-[250px]">
+
+<img src="/icons/uk.svg" class="w-[38px] h-[38px]" />
+
+<div class="flex flex-col">
+
+<p class="font-semibold text-[14px]">United Kingdom</p>
+<p class="text-[13px]">
+Harrow, Greater London HA1 2LW.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="border-t border-[#FFFFFF33] my-14"></div>
+
+
+<!-- Footer Links -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-[14px]">
+
+
+<!-- Quick Links -->
+<div>
+
+<h4 class="font-semibold text-[18px] mb-6 underline">
+Quick Links
+</h4>
+
+<ul class="space-y-4 text-[16px]">
+
+<li><a href="/" class="hover:text-[#EE5125]">Home</a></li>
+<li><a href="/work" class="hover:text-[#EE5125]">Our Work</a></li>
+<li><a href="/about" class="hover:text-[#EE5125]">About</a></li>
+<li><a href="/contact" class="hover:text-[#EE5125]">Contact Us</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- Services -->
+<div>
+
+<h4 class="font-semibold text-[18px] mb-6 underline">
+Services
+</h4>
+
+<ul class="space-y-4 text-[16px]">
+
+<li><a href="#">Digital Marketing</a></li>
+<li><a href="#">Branding and Design</a></li>
+<li><a href="#">Business Consulting</a></li>
+<li><a href="#">Website & App Development</a></li>
+<li><a href="#">Technology & Product Development</a></li>
+<li><a href="#">Performance & Analytics</a></li>
+<li><a href="#">Market Research Consumer</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- Company -->
+<div>
+
+<h4 class="font-semibold text-[18px] mb-6 underline">
+Company
+</h4>
+
+<ul class="space-y-4 text-[16px]">
+
+<li><a href="/insights">Insights</a></li>
+<li><a href="/careers">Career</a></li>
+<li><a href="/faqs">FAQ</a></li>
+<li><a href="/clients">Our Clients</a></li>
+<li><a href="/franchising">Franchising</a></li>
+
+</ul>
+
+</div>
+
+
+<!-- Contact -->
+<div>
+
+<h4 class="font-semibold text-[18px] mb-6 underline">
+Contacts
+</h4>
+
+<div class="space-y-4 text-[16px]">
+
+<div class="flex gap-3 items-start">
+
+<Phone size={16} />
+
+<a href="tel:+919985202223" class="hover:text-[#EE5125]">
++91 99852 02223
+</a>
+
+</div>
+
+
+<div class="flex gap-3 items-start">
+
+<Mail size={16} />
+
+<a href="mailto:info@marcamor.com" class="hover:text-[#EE5125]">
+info@marcamor.com
+</a>
+
+</div>
+
+
+<div class="flex gap-3 items-start">
+
+<MapPin size={20} />
+
+<span>
+Ground Floor, Sai Sadan, Madhapur,
+Hyderabad, Telangana 500081, India.
+</span>
+
+</div>
+
+
+<button class="group text-[#EE5125] text-[13px] lg:ml-9 ml-6 flex items-center uppercase gap-2 mt-2">
+
+<span class="relative">
+
+Get Direction
+
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-[#EE5125] transition-all duration-300 group-hover:w-full"></span>
+
+</span>
+
+<ArrowRight size={14} />
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="border-t border-white/10 my-14"></div>
+
+
+<div class="flex flex-wrap justify-center gap-8 text-white/50 text-[12px] uppercase tracking-wide">
+
+<span>India:</span>
+<span>Hyderabad</span>
+<span>Chennai</span>
+<span>Bengaluru</span>
+<span>Gurugram</span>
+<span>Mumbai</span>
+
+</div>
+
+
+<div class="border-t border-white/10 my-10"></div>
+
+
+<div class="text-center text-white/40 text-[12px]">
+
+© 2025 All Copyright Reserved by Marcamor.
+
+</div>
+
+</div>
+
+</footer>

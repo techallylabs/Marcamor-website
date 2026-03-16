@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import PackagingHero from "../../../components/services/packaging-design/PackagingHero.astro";
+import PackagingMarquee from "../../../components/services/packaging-design/Marquee.astro";
+import PackagingServices from "../../../components/services/packaging-design/OurServices.astro";
+import PackagingStrategy from "../../../components/services/packaging-design/TurningStrategy.astro";
+import PackagingCategory from "../../../components/services/packaging-design/Category.jsx";
+import PackagingWhyChoose from "../../../components/services/packaging-design/WhyChooseMarcamor.astro";
+import PackagingFaq from "../../../components/services/packaging-design/PackagingFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Packaging Design Services">
+
+<PackagingHero />
+
+<PackagingMarquee />
+
+<PackagingServices />
+
+<PackagingStrategy />
+
+<PackagingCategory client:load />
+
+<PackagingWhyChoose />
+
+<PackagingFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

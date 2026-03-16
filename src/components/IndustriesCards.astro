@@ -1,0 +1,89 @@
+---
+import IndustryCard from "./IndustryCard.astro";
+
+const industriesData = [
+  {
+    title: "Not-For-Profit",
+    desc: "Strategic communication and digital systems designed to amplify impact, donor engagement, and operational transparency.",
+  },
+  {
+    title: "Real Estate & Construction",
+    desc: "High-conversion digital platforms and targeted acquisition strategies built for project visibility and lead generation at scale.",
+  },
+  {
+    title: "B2B",
+    desc: "Structured brand positioning and performance-driven digital infrastructure tailored for complex sales cycles and enterprise growth.",
+  },
+  {
+    title: "E-Commerce",
+    desc: "End-to-end growth ecosystems combining performance marketing, conversion optimization, and scalable digital platforms.",
+  },
+  {
+    title: "Education",
+    desc: "Search-driven visibility and structured enrollment funnels designed to accelerate institutional growth.",
+  },
+  {
+    title: "Technology",
+    desc: "Product-focused branding and demand-generation systems built to support innovation and market expansion.",
+  },
+  {
+    title: "Business-to-Consumer",
+    desc: "Audience-centric growth strategies focused on engagement, retention, and scalable revenue acquisition.",
+  },
+  {
+    title: "Health & Wellness",
+    desc: "Trust-led branding and digital performance frameworks designed to drive credibility and sustainable customer growth.",
+  },
+  {
+    title: "Law",
+    desc: "Authority-driven digital positioning and structured lead systems built on trust, compliance, and credibility.",
+  },
+  {
+    title: "Food & Beverages",
+    desc: "Brand-led growth systems combining packaging identity, digital marketing, and retail visibility.",
+  },
+  {
+    title: "Professional Services",
+    desc: "Strategic positioning and performance marketing frameworks that elevate expertise into measurable growth.",
+  },
+  {
+    title: "Entertainment & Media",
+    desc: "High-impact branding and digital engagement strategies engineered for audience scale and visibility.",
+  },
+  {
+    title: "Startups",
+    desc: "Structured go-to-market systems, MVP development, and scalable acquisition frameworks built for rapid growth.",
+  },
+  {
+    title: "Sports & Fitness",
+    desc: "Community-driven brand ecosystems and performance campaigns designed to increase engagement and memberships.",
+  },
+  {
+    title: "Travel & Hospitality",
+    desc: "Experience-focused branding and digital acquisition strategies built to drive bookings and long-term brand loyalty.",
+  },
+];
+---
+
+<section class="bg-[#FFF9F6]">
+<div class="max-w-[1440px] w-[90%] mx-auto pb-10 lg:pb-20">
+
+<div
+class="
+grid
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-2
+xl:grid-cols-3
+gap-4
+"
+>
+
+{industriesData.map((item, index) => (
+<IndustryCard item={item} index={index} />
+))}
+
+</div>
+
+</div>
+</section>

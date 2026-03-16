@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import BrandingHero from "../../../components/services/branding-design/BrandingHero.astro";
+import BrandingMarquee from "../../../components/services/branding-design/Marquee.astro";
+import BrandingServices from "../../../components/services/branding-design/OurServices.astro";
+import BrandingStrategy from "../../../components/services/branding-design/TurningStrategy.astro";
+import BrandingCategory from "../../../components/services/branding-design/Category.jsx";
+import BrandingWhyChoose from "../../../components/services/branding-design/WhyChooseMarcamor.astro";
+import BrandingFaq from "../../../components/services/branding-design/BrandingFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Branding & Design Services">
+
+<BrandingHero />
+
+<BrandingMarquee />
+
+<BrandingServices />
+
+<BrandingStrategy />
+
+<BrandingCategory client:load />
+
+<BrandingWhyChoose />
+
+<BrandingFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

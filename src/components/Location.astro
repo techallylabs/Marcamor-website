@@ -1,0 +1,223 @@
+---
+import { ExternalLink } from "lucide-react";
+
+const cities = [
+  "New York",
+  "Houston",
+  "Montreal",
+  "Vancouver",
+  "Los Angeles",
+  "Washington",
+  "Dallas",
+  "San Francisco",
+];
+---
+
+<section class="bg-black text-white py-10 lg:py-20">
+  <div class="max-w-[1440px] mx-auto w-[90%]">
+    
+    <!-- Badge -->
+    <div class="flex justify-center mb-6">
+      <span class="px-4 py-2 bg-white/10 rounded-full text-[14px] font-medium">
+        Locations
+      </span>
+    </div>
+
+    <!-- Title -->
+    <div class="text-center max-w-[1000px] mx-auto px-4">
+      <h2 class="font-semibold leading-[1.1] tracking-[-0.5px]">
+
+        <span class="block
+          text-[26px]
+          sm:text-[40px]
+          md:text-[48px]
+          lg:text-[60px]">
+          Collaborating With Clients
+        </span>
+
+        <span class="mt-3 flex items-center justify-center gap-4
+          text-[26px]
+          sm:text-[40px]
+          md:text-[48px]
+          lg:text-[60px]">
+
+          <span>Across</span>
+
+          <span class="inline-flex items-center gap-3
+            bg-white/10
+            px-5
+            py-2
+            rounded-full
+            backdrop-blur-sm">
+
+            <img
+              src="/images/global.svg"
+              alt="global"
+              class="lg:w-[40px] lg:h-[40px] w-[20px] h-[20px]"
+            />
+
+            <span class="whitespace-nowrap">
+              The Globe
+            </span>
+
+          </span>
+        </span>
+
+      </h2>
+
+      <p class="mt-8 text-white/60
+        text-[15px]
+        sm:text-[16px]
+        max-w-[760px]
+        mx-auto
+        leading-relaxed">
+
+        Operating across India, the United States, and the United Kingdom,
+        Marcamor collaborates with ambitious companies worldwide. Our
+        cross-functional team works seamlessly across time zones to build
+        scalable brands, digital platforms, and performance-driven growth
+        systems.
+
+      </p>
+    </div>
+
+    <!-- Locations -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-16">
+
+      <!-- India -->
+      <div class="relative rounded-[12px] overflow-hidden group">
+        <img
+          src="/images/office1.svg"
+          class="w-full h-[300px] sm:h-[380px] lg:h-[420px] object-cover"
+        />
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="absolute top-0 right-4 bg-[#00000080] text-[17px] font-semibold px-[12px] py-[6px] rounded-bl-2xl rounded-br-2xl">
+          India Headquarter
+        </div>
+
+        <div class="absolute bottom-8 left-6 right-6 flex justify-between gap-6">
+
+          <h3 class="text-[24px] font-semibold">
+            Hyderabad
+          </h3>
+
+          <div class="max-w-[300px]">
+            <p class="text-[16px] font-semibold text-white/90 leading-relaxed">
+              Hyderabad, Telangana 500081.
+            </p>
+
+            <button
+              class="group mt-4 px-4 py-2 bg-white/20 text-[13px] sm:text-[14px]
+              font-bold text-white flex items-center gap-2 rounded-full
+              backdrop-blur-sm transition-all duration-300"
+            >
+
+              <span class="relative">
+                Visit Us
+                <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
+
+              <ExternalLink size={18} />
+
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- USA -->
+      <div class="relative rounded-[12px] overflow-hidden group">
+
+        <img
+          src="/images/office2.svg"
+          class="w-full h-[300px] sm:h-[380px] lg:h-[420px] object-cover"
+        />
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="absolute top-0 right-4 bg-[#00000080] text-[17px] font-semibold px-[12px] py-[6px] rounded-bl-2xl rounded-br-2xl">
+          Canada Headquarter
+        </div>
+
+        <div class="absolute bottom-8 left-6 right-6 flex justify-between gap-6">
+
+          <h3 class="text-[24px] font-semibold">
+            California
+          </h3>
+
+          <div class="max-w-[300px]">
+
+            <p class="text-[16px] font-semibold text-white/90 leading-relaxed">
+              San Francisco, California 94108.
+            </p>
+
+            <button
+              class="group mt-4 px-4 py-2 bg-white/20 text-[13px] sm:text-[14px]
+              font-bold text-white flex items-center gap-2 rounded-full
+              backdrop-blur-sm transition-all duration-300"
+            >
+
+              <span class="relative">
+                Visit Us
+                <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
+
+              <ExternalLink size={18} />
+
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- UK -->
+      <div class="relative rounded-[12px] overflow-hidden group">
+
+        <img
+          src="/images/office3.svg"
+          class="w-full h-[300px] sm:h-[380px] lg:h-[420px] object-cover"
+        />
+
+        <div class="absolute inset-0 bg-black/30"></div>
+
+        <div class="absolute top-0 right-4 bg-[#00000080] text-[17px] font-semibold px-[12px] py-[6px] rounded-bl-2xl rounded-br-2xl">
+          USA Headquarter
+        </div>
+
+        <div class="absolute bottom-8 left-6 right-6 flex justify-between gap-6">
+
+          <h3 class="text-[24px] font-semibold">
+            London
+          </h3>
+
+          <div class="max-w-[300px]">
+
+            <p class="text-[16px] font-semibold text-white/90 leading-relaxed">
+              Harrow, Greater London HA1 2LW.
+            </p>
+
+            <button
+              class="group mt-4 px-4 py-2 bg-white/20 text-[13px] sm:text-[14px]
+              font-bold text-white flex items-center gap-2 rounded-full
+              backdrop-blur-sm transition-all duration-300"
+            >
+
+              <span class="relative">
+                Visit Us
+                <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+              </span>
+
+              <ExternalLink size={18} />
+
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

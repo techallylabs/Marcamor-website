@@ -1,0 +1,192 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import FooterSection from "../../components/FooterSection.astro"
+import ResumeUpload from "../../components/ResumeUpload.astro"
+import { jobs } from "../../data/jobs.js"
+
+const bag="/icons/bag.svg"
+const profile="/icons/pro.svg"
+const map="/icons/map.svg"
+
+/* Dynamic pages generator */
+export async function getStaticPaths() {
+  return jobs.map((job) => ({
+    params: { slug: job.slug },
+    props: { job }
+  }))
+}
+
+const { job } = Astro.props
+---
+
+<Layout title={job.title}>
+
+<section class="bg-[#F8F6F4] py-10 lg:py-16">
+
+<div class="max-w-[1440px] w-[90%] mx-auto mb-10 lg:mb-20">
+
+<a
+href="/careers"
+class="flex items-center gap-2 text-sm text-black font-semibold mb-6 hover:text-black transition"
+>
+← <span class="hidden lg:block">Back to Careers</span>
+</a>
+
+<div class="bg-[#0000000D] rounded-[14px] p-6 lg:p-8 flex flex-col lg:flex-row justify-between gap-6">
+
+<div>
+
+<h1 class="text-[28px] lg:text-[44px] font-semibold text-[#EE5125] capitalize">
+{job.title}
+</h1>
+
+<div class="flex flex-wrap gap-3 mt-4">
+
+<div class="flex items-center gap-2 bg-[#0000001A] px-3 py-1.5 rounded-[8px] text-sm font-medium">
+<img src={bag} class="w-[16px] h-[16px]" />
+<span>{job.type}</span>
+</div>
+
+<div class="flex items-center gap-2 bg-[#0000001A] px-3 py-1.5 rounded-[8px] text-sm font-medium">
+<img src={profile} class="w-[16px] h-[16px]" />
+<span>{job.experience}</span>
+</div>
+
+<div class="flex items-center gap-2 bg-[#0000001A] px-3 py-1.5 rounded-[8px] text-sm font-medium">
+<img src={map} class="w-[16px] h-[16px]" />
+<span>{job.location}</span>
+</div>
+
+</div>
+
+</div>
+
+<div class="lg:flex lg:flex-col flex items-end gap-4">
+
+<button
+class="self-start lg:self-center bg-gradient-to-r from-[#E51F31] to-[#EE5125] text-white px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition"
+>
+APPLY NOW
+</button>
+
+<div class="bg-[#0000001A] px-3 py-1.5 rounded-[8px]">
+<img src="/icons/share-icon.svg" />
+</div>
+
+</div>
+
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-8 mt-5 lg:mt-10">
+
+<div class="lg:col-span-2 bg-[#0000000D] rounded-[14px] p-6 lg:p-8">
+
+<h2 class="text-[30px] font-semibold mb-4">
+About the Role
+</h2>
+
+<p class="text-sm text-black leading-relaxed mb-6">
+{job.AboutRole}
+</p>
+
+<hr class="my-6 border-[#00000080]" />
+
+<h3 class="text-sm font-semibold mb-3">
+Roles & Responsibilities:
+</h3>
+
+<ul class="list-disc pl-5 text-sm text-black space-y-2 mb-6">
+{job.RolesResponsibilities.map((item)=>(
+<li>{item}</li>
+))}
+</ul>
+
+<h3 class="text-sm font-semibold mb-3">
+Requirements:
+</h3>
+
+<ul class="list-disc pl-5 text-sm text-black space-y-2 mb-6">
+{job.Requirements.map((item)=>(
+<li>{item}</li>
+))}
+</ul>
+
+<h3 class="text-sm font-semibold mb-3">
+Benefits:
+</h3>
+
+<ul class="list-disc pl-5 text-sm text-black space-y-2 mb-6">
+{job.Benefits.map((item)=>(
+<li>{item}</li>
+))}
+</ul>
+
+</div>
+
+<div class="bg-[#0000000D] rounded-[14px] p-6 lg:p-8">
+
+<h2 class="text-lg font-semibold mb-6">
+Apply for this role:
+</h2>
+
+<form class="space-y-4">
+
+<div>
+<label class="block text-sm font-medium mb-2 text-[#797675]">
+Full Name <span class="text-[#EE5125]">*</span>
+</label>
+<input class="w-full h-[44px] rounded-[8px] bg-[#0000000D] px-4 focus:outline-none" />
+</div>
+
+<div>
+<label class="block text-sm font-medium mb-2 text-[#797675]">
+Email <span class="text-[#EE5125]">*</span>
+</label>
+<input class="w-full h-[44px] rounded-[8px] bg-[#0000000D] px-4 focus:outline-none" />
+</div>
+
+<div>
+<label class="block text-sm font-medium mb-2 text-[#797675]">
+Phone Number <span class="text-[#EE5125]">*</span>
+</label>
+<input class="w-full h-[44px] rounded-[8px] bg-[#0000000D] px-4 focus:outline-none" />
+</div>
+
+<div>
+<label class="block text-sm font-medium mb-2 text-[#797675]">
+Experience (Years)
+</label>
+<select class="w-full h-[44px] rounded-[8px] bg-[#0000000D] px-4 focus:outline-none">
+<option>Please Select</option>
+</select>
+</div>
+
+<div>
+<label class="block text-sm font-medium mb-2 text-[#797675]">
+Portfolio / LinkedIn URL
+</label>
+<input class="w-full h-[44px] rounded-[8px] bg-[#0000000D] px-4 focus:outline-none" />
+</div>
+
+<ResumeUpload />
+
+<button
+type="submit"
+class="w-full bg-gradient-to-r from-[#E51F31] to-[#EE5125] text-white py-3 rounded-[8px] font-medium hover:opacity-90 transition"
+>
+Submit
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<FooterSection />
+
+</Layout>

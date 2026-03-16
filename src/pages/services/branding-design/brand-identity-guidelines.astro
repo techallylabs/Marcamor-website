@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import BrandIdentityHero from "../../../components/services/brand-identity-guidelines/BrandIdentityHero.astro";
+import BrandIdentityMarquee from "../../../components/services/brand-identity-guidelines/Marquee.astro";
+import BrandIdentityServices from "../../../components/services/brand-identity-guidelines/OurServices.astro";
+import BrandIdentityStrategy from "../../../components/services/brand-identity-guidelines/TurningStrategy.astro";
+import BrandIdentityCategory from "../../../components/services/brand-identity-guidelines/Category.jsx";
+import BrandIdentityWhyChoose from "../../../components/services//brand-identity-guidelines/WhyChooseMarcamor.astro";
+import BrandIdentityFaq from "../../../components/services/brand-identity-guidelines/BrandIdentityFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Brand Identity & Guidelines Services">
+
+<BrandIdentityHero />
+
+<BrandIdentityMarquee />
+
+<BrandIdentityServices />
+
+<BrandIdentityStrategy />
+
+<BrandIdentityCategory client:load />
+
+<BrandIdentityWhyChoose />
+
+<BrandIdentityFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

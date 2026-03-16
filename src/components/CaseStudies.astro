@@ -1,0 +1,222 @@
+---
+import { ChevronRight } from "lucide-react";
+
+const caseStudies = [
+  {
+    title: "TSRTC",
+    desc: "SEO-led traffic growth for Telangana State Road Transport Corporation by optimizing...",
+    deliverables: ["Website", "SEO"],
+    industry: "Transport",
+    liveLink: "https://example1.com",
+    image: "/images/tsrtc.png",
+  },
+  {
+    title: "Turito",
+    desc: "Scaled organic traffic through strategic keyword targeting across high-difficulty academic...",
+    deliverables: ["Website", "SEO"],
+    industry: "education",
+    liveLink: "https://example1.com",
+    image: "/images/turitobg.png",
+  },
+  {
+    title: "Daughter Earth",
+    desc: "Scaled paid media campaigns for a D2C beauty brand, achieving 4–5x ROAS while managing...",
+    deliverables: ["Performance Marketing", "Performance Marketing"],
+    industry: "beauty",
+    liveLink: "https://example3.com",
+    image: "/images/earth.svg",
+  },
+  {
+    title: "Vedantu",
+    desc: "Delivered high-performing paid campaigns for the EdTech platform, achieving 9x ROAS while...",
+    deliverables: ["Performance Marketing", "Performance Marketing"],
+    industry: "Education",
+    liveLink: "https://example4.com",
+    image: "/images/vedantubg.svg",
+  },
+  {
+    title: "V Sparkel",
+    desc: "Scaled Instagram presence from 50K to 300K+ followers through high-engagement reels,...",
+    deliverables: ["Social Media Marketing", "Social Media Marketing"],
+    industry: "beauty",
+    liveLink: "https://example5.com",
+    image: "/images/sparkelbg.svg",
+  },
+  {
+    title: "upGrad",
+    desc: "Expanded Instagram community from 30K to 240K+ followers by leveraging career-focused reels,...",
+    deliverables: ["Social Media Marketing", "Social Media Marketing"],
+    industry: "education",
+    liveLink: "https://example5.com",
+    image: "/images/upgradbg.svg",
+  },
+];
+---
+
+<section class="bg-[#fff9f6] py-12 lg:py-20">
+<div class="max-w-[1440px] mx-auto w-[90%] space-y-10 lg:space-y-20">
+
+<!-- Heading -->
+<div class="flex flex-col gap-4">
+
+<div>
+<h2 class="text-[32px] sm:text-[40px] lg:text-[54px] font-semibold leading-tight">
+Case Studies.
+</h2>
+
+<h2 class="text-[32px] sm:text-[40px] lg:text-[54px] text-[#A9A9A9] font-semibold leading-tight">
+Featured Project
+</h2>
+</div>
+
+<div class="bg-white px-5 py-2 rounded-full w-fit">
+<button class="text-[14px] font-medium">
+FILTER WITH TAGS
+</button>
+</div>
+
+<div class="flex gap-3 overflow-x-auto pb-2 scroll-smooth snap-x snap-mandatory no-scrollbar">
+
+{[
+"All",
+"Digital Marketing",
+"Branding and Design",
+"Business Consulting",
+"Website and App Development",
+"Technology and Product Development",
+"Performance and Analytics",
+"Market Research and Consumer Insights",
+].map(tag => (
+
+<button
+class="whitespace-nowrap text-[14px] font-medium rounded-full px-4 py-1.5 transition bg-[#0000000D] border border-[#00000026] hover:bg-black/10"
+>
+
+{tag}
+
+</button>
+
+))}
+
+</div>
+
+</div>
+
+
+{caseStudies.map(item => (
+
+<div class="grid grid-cols-1 xl:grid-cols-[1fr_801px] gap-8 items-stretch">
+
+<!-- LEFT -->
+
+<div class="space-y-4 lg:space-y-6 h-full flex flex-col">
+
+<div>
+
+<h2 class="text-[28px] sm:text-[32px] lg:text-[36px] font-semibold mb-2">
+{item.title}
+</h2>
+
+<p class="text-[15px] sm:text-[16px] text-black max-w-lg">
+{item.desc}
+</p>
+
+</div>
+
+
+<div class="flex flex-wrap items-start gap-10">
+
+<div>
+
+<p class="text-[12px] tracking-widest text-black/50 mb-2 font-semibold">
+DELIVERABLES
+</p>
+
+{item.deliverables.map(d => (
+<p class="font-semibold">{d}</p>
+))}
+
+</div>
+
+
+<div class="hidden lg:block w-px bg-black/20 h-16"></div>
+
+
+<div>
+
+<p class="text-[12px] tracking-widest text-black/50 mb-2 font-semibold">
+INDUSTRY
+</p>
+
+<p class="font-semibold capitalize">
+{item.industry}
+</p>
+
+</div>
+
+</div>
+
+
+<div class="flex flex-wrap gap-4">
+
+<button class="h-[44px] px-6 rounded-full text-[13px] font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] flex items-center gap-2 text-white">
+
+View Case Study
+
+<ChevronRight size={16}/>
+
+</button>
+
+
+<a
+href={item.liveLink}
+target="_blank"
+rel="noopener noreferrer"
+class="h-[44px] px-6 rounded-full text-[13px] font-semibold border border-[#00000026] flex items-center gap-2 hover:bg-black/5 transition"
+>
+
+Live Site
+
+<ChevronRight size={16}/>
+
+</a>
+
+</div>
+
+
+<div class="hidden lg:block mt-auto">
+
+<div
+class="relative w-[440px] h-[234px] rounded-[18px] overflow-hidden bg-center bg-cover"
+style={`background-image: url(${item.image})`}
+>
+
+<button class="bg-white text-black rounded-[14px] px-4 py-1 text-[12px] absolute top-4 left-4 font-medium shadow">
+Hover to Scroll
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT IMAGE -->
+
+<div class="w-full lg:w-[801px] h-full rounded-[10px] lg:rounded-[14px] overflow-hidden">
+
+<img
+src={item.image}
+alt={item.title}
+class="w-full h-full object-cover"
+/>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+</section>

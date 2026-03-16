@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import SeoHero from "../../../components/services/seo/SeoCom.astro";
+import SeoMarquee from "../../../components/services/seo/SeoMarquee.astro";
+import SeoServices from "../../../components/services/seo/OurServices.astro";
+import SeoStrategy from "../../../components/services/seo/TurningStrategy.astro";
+import SeoCategory from "../../../components/services/seo/Category";
+import SeoWhyChoose from "../../../components/services/seo/WhyChooseMarcamor.astro";
+import SeoFaq from "../../../components/services/seo/SeoFaq";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="SEO Services">
+
+<SeoHero />
+
+<SeoMarquee />
+
+<SeoServices />
+
+<SeoStrategy />
+
+<SeoCategory client:load />
+
+<SeoWhyChoose />
+
+<SeoFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

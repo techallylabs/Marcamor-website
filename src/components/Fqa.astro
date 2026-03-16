@@ -1,0 +1,164 @@
+---
+const leftFaqs = [
+{
+question:"What does Marcamor specialize in?",
+answer:"We build scalable brand ecosystems through branding, digital marketing, technology, and strategic consulting."
+},
+{
+question:"Do you offer end to end services?",
+answer:"Yes. We provide complete solutions from brand strategy to performance execution and analytics."
+},
+{
+question:"Which industries do you work with?",
+answer:"We work across technology, wellness, education, transport, D2C, services, and enterprise sectors."
+},
+{
+question:"Do you work with startups or established companies?",
+answer:"Both. We support early stage growth and large scale expansion."
+},
+{
+question:"How do you measure success?",
+answer:"Through defined KPIs such as traffic growth, conversion rates, acquisition cost, and revenue impact."
+},
+{
+question:"Do you offer franchise partnerships?",
+answer:"Yes. We are expanding through structured regional partnerships."
+},
+{
+question:"Do you operate internationally?",
+answer:"Yes. We serve clients across India, the United States, and the United Kingdom."
+},
+{
+question:"How can I start working with Marcamor?",
+answer:"Submit your requirements through our contact page and our team will review and respond."
+},
+{
+question:"How long does a typical project take?",
+answer:"Project timelines depend on scope and complexity. Most engagements begin within a few weeks after strategy alignment."
+}
+];
+
+const rightFaqs = [
+{
+question:"Do you provide customized solutions?",
+answer:"Yes. Every solution is tailored to the client’s industry, objectives, and growth stage."
+},
+{
+question:"Can I hire Marcamor for a single service?",
+answer:"Yes. Clients can engage us for specific services or complete ecosystem development."
+},
+{
+question:"Do you provide ongoing support after project completion?",
+answer:"Yes. We offer long term support, optimization, and performance monitoring."
+},
+{
+question:"How do you ensure quality control?",
+answer:"Through senior level oversight, structured workflows, and defined performance benchmarks."
+},
+{
+question:"Do you work with international clients?",
+answer:"Yes. We collaborate with clients across multiple global markets."
+},
+{
+question:"What is your onboarding process?",
+answer:"We begin with strategic consultation, define objectives, align scope, and then initiate structured execution."
+},
+{
+question:"Do you sign NDAs and confidentiality agreements?",
+answer:"Yes. Client confidentiality and data protection are strictly maintained."
+},
+{
+question:"How do you handle performance reporting?",
+answer:"We provide structured reports with measurable metrics aligned to business goals."
+},
+{
+question:"Can Marcamor handle large scale enterprise projects?",
+answer:"Yes. Our frameworks are designed to support scalable and enterprise level engagements."
+}
+];
+---
+
+<section class="py-20 bg-gradient-to-b from-[#FDE6D7] to-white text-black">
+
+<div class="max-w-[1440px] mx-auto w-[90%]">
+
+<div class="mb-10">
+<button class="text-sm font-medium bg-white px-4 py-2 rounded-full uppercase tracking-wide">
+FAQ'S
+</button>
+</div>
+
+<div class="grid gap-8 lg:grid-cols-3">
+
+<div class="flex flex-col gap-6">
+
+<h2 class="text-[22px] lg:text-[28px] md:text-[34px] font-semibold leading-tight">
+Answers To Frequently Asked Questions
+</h2>
+
+<p class="text-[#00000080] text-[15px] leading-relaxed">
+Explore how Marcamor operates across branding, digital growth, technology, and consulting. Our structured processes, performance systems, and scalable frameworks ensure clarity, consistency, and measurable outcomes.
+</p>
+
+<button class="group h-[44px] w-fit px-6 rounded-full text-sm font-semibold border border-black/40 flex items-center gap-2 uppercase transition-all duration-300">
+
+<span class="relative">
+Schedule a Strategy Call
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+<path d="M5 12l5-4-5-4"/>
+</svg>
+
+</button>
+
+</div>
+
+<div class="lg:col-span-2 grid gap-10 md:grid-cols-2">
+
+{[leftFaqs,rightFaqs].map((group)=>(
+<div class="space-y-6">
+
+{group.map((faq)=>(
+
+<details class="border-b border-black/10 pb-6 group">
+
+<summary class="flex items-center justify-between cursor-pointer list-none">
+
+<h3 class="text-[14px] font-medium">
+{faq.question}
+</h3>
+
+<svg class="transition-transform duration-300 group-open:rotate-180"
+xmlns="http://www.w3.org/2000/svg"
+width="20"
+height="20"
+fill="none"
+stroke="currentColor"
+stroke-width="2">
+
+<path d="M6 9l6 6 6-6"/>
+
+</svg>
+
+</summary>
+
+<p class="text-black/70 text-sm leading-relaxed mt-4">
+{faq.answer}
+</p>
+
+</details>
+
+))}
+
+</div>
+))}
+
+</div>
+
+</div>
+
+</div>
+
+</section>

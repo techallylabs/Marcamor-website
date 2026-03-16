@@ -1,0 +1,81 @@
+---
+const Contactbg = "/images/contact-bg3.png";
+const Contactbgmb = "/images/contact-mb-bg.png";
+
+const google = "/images/google.svg";
+const upcity = "/images/upcity.svg";
+const star5 = "/images/star5.svg";
+const review = "/images/review.svg";
+const contactLogo = "/images/contact-bg-logo1.svg";
+---
+
+<section
+  class="relative bg-cover bg-center bg-no-repeat text-white"
+  style={`background-image: url(${Contactbgmb})`}
+>
+
+  <!-- Desktop Background -->
+  <div
+    class="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style={`background-image: url(${Contactbg})`}
+  ></div>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto w-[90%] py-20">
+
+    <div class="flex flex-col gap-2 xl:gap-6 items-center relative justify-center">
+
+      <h2 class="text-[22px] lg:text-[54px] font-semibold text-center">
+        Let’s get started with Marcamor
+      </h2>
+
+      <p class="font-medium text-center">
+        Contact us to discuss your inquiry, and we'll get back to you shortly.
+      </p>
+
+
+      <!-- Floating Logo -->
+      <div
+        class="
+        relative
+        w-[170px] h-[170px]
+        xl:w-[310px] xl:h-[310px]
+        xl:absolute
+        xl:right-0
+        xl:top-19
+        "
+      >
+
+        <img
+          src={contactLogo}
+          alt="logo"
+          class="w-full h-full object-contain absolute top-7 lg:top-0"
+        />
+
+      </div>
+
+
+      <!-- Reviews Card -->
+
+      <div class="bg-white rounded-[14px] px-6 sm:px-8 py-6">
+
+        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10">
+
+          <div class="flex justify-center lg:justify-start gap-6 flex-wrap">
+            <img src={google} alt="Google Reviews" class="h-[70px]" />
+            <img src={upcity} alt="Upcity Reviews" class="h-[70px]" />
+          </div>
+
+          <div class="flex justify-center lg:justify-end gap-6 flex-wrap">
+            <img src={review} alt="Review Badge" class="h-[70px]" />
+            <img src={star5} alt="5 Star Rating" class="h-[70px]" />
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

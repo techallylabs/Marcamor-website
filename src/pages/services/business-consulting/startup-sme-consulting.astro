@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import StartupHero from "../../../components/services/startup-sme-consulting/StartupHero.astro";
+import StartupMarquee from "../../../components/services/startup-sme-consulting/Marquee.astro";
+import StartupServices from "../../../components/services/startup-sme-consulting/OurServices.astro";
+import StartupStrategy from "../../../components/services/startup-sme-consulting/TurningStrategy.astro";
+import StartupCategory from "../../../components/services/startup-sme-consulting/Category.jsx";
+import StartupWhyChoose from "../../../components/services/startup-sme-consulting/WhyChooseMarcamor.astro";
+import StartupFaq from "../../../components/services/startup-sme-consulting/StartupFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Startup & SME Consulting Services">
+
+<StartupHero />
+
+<StartupMarquee />
+
+<StartupServices />
+
+<StartupStrategy />
+
+<StartupCategory client:load />
+
+<StartupWhyChoose />
+
+<StartupFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import ConsultingHero from "../../../components/services/business-consulting/ConsultingHero.astro";
+import ConsultingMarquee from "../../../components/services/business-consulting/Marquee.astro";
+import ConsultingServices from "../../../components/services/business-consulting/OurServices.astro";
+import ConsultingStrategy from "../../../components/services/business-consulting/TurningStrategy.astro";
+import ConsultingCategory from "../../../components/services/business-consulting/Category.jsx";
+import ConsultingWhyChoose from "../../../components/services/business-consulting/WhyChooseMarcamor.astro";
+import ConsultingFaq from "../../../components/services/business-consulting/ConsultingFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Business Consulting Services">
+
+<ConsultingHero />
+
+<ConsultingMarquee />
+
+<ConsultingServices />
+
+<ConsultingStrategy />
+
+<ConsultingCategory client:load />
+
+<ConsultingWhyChoose />
+
+<ConsultingFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

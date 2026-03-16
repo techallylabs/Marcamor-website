@@ -1,0 +1,343 @@
+---
+import { ArrowRight } from "lucide-react";
+
+const digitalTags = [
+"Search Engine Optimization",
+"Email Marketing",
+"Performance Marketing",
+"Content Marketing",
+"Social Media Marketing",
+"Affiliate Marketing",
+"Influencer Marketing",
+"YouTube Marketing",
+"WhatsApp Marketing",
+];
+
+const brandingTags = [
+"Brand Strategy",
+"Logo Design",
+"Brand Identity and Guidelines",
+"Packaging Design",
+"Corporate Communication Design",
+"UI/UX Design",
+];
+
+const consultingTags = [
+"Startup and SME Consulting",
+"Go To Market Strategy",
+" Franchise Consulting",
+"Sales and Revenue Strategy",
+"Business Process Optimization",
+];
+
+const devTags = [
+"Custom Web and App Design",
+"E-commerce Development",
+"Mobile App Development Android iOS",
+"API Integration",
+"Maintenance and AMC Plans",
+];
+
+const productTags = [
+"SaaS Product Development",
+"MVP Building for Startups",
+"No Code and Low Code Development",
+"ERP and CRM Integration",
+];
+
+const analyticsTags = [
+"Marketing Analytics and BI Reporting",
+"GTM and Analytics",
+" Heatmap and Behavior Tracking",
+" KPI Dashboard Setup",
+"Conversion Optimization",
+];
+
+const researchTags = [
+"Market Feasibility Studies",
+"Consumer Behavior Analysis",
+"Competitor Analysis",
+"Brand Perception Studies",
+"Industry and Trends Reports",
+"Customer Segmentation and Process Building",
+"Customer Segmentation and Process Building",
+" Product Testing and Feedback Loops",
+" Geographical Market Entry Studies",
+];
+---
+
+<section class="bg-[#fff9f6] text-black py-10 lg:py-24">
+<div class="max-w-[1440px] mx-auto w-[90%]">
+
+<div class="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-28 mb-8 lg:mb-16">
+<h1 class="text-[42px] lg:text-[54px] font-semibold leading-tight">
+Our Services
+</h1>
+
+<p class="text-[16px] text-black/60 max-w-[420px]">
+Creative Solutions Crafted To Help You Achieve <br />
+The Perfect Digital Presence
+</p>
+</div>
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+
+<!-- Digital Marketing -->
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5 h-full">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3 leading-snug">
+Digital Marketing
+</h2>
+
+<p class="text-[14px] text-black/70 leading-relaxed">
+At Marcamor, we design integrated digital growth systems that combine organic visibility, paid acquisition, and audience engagement into one measurable framework.
+</p>
+
+<div class="flex flex-wrap gap-2">
+{digitalTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+</div>
+
+<div class="border-t border-black/20 pt-5 mt-auto">
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Digital Marketing
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16} />
+
+</button>
+</div>
+
+</div>
+
+
+<!-- Branding -->
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5 h-full">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3">
+Branding and Design
+</h2>
+
+<p class="text-[14px] text-black/70 leading-relaxed">
+We build structured brand ecosystems that align strategy, identity, and communication into a cohesive market presence.
+</p>
+
+<div class="flex flex-wrap gap-2">
+{brandingTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+</div>
+
+<div class="border-t border-black/20 pt-5 mt-auto">
+
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Branding and Design
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16}/>
+
+</button>
+
+</div>
+</div>
+
+
+<!-- Business Consulting -->
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3">
+Business Consulting
+</h2>
+
+<p class="text-[14px] text-black/70">
+Our consulting division focuses on structured business growth, operational efficiency, and scalable revenue models.
+</p>
+
+<div class="flex flex-wrap gap-2">
+{consultingTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+</div>
+
+<div class="border-t border-black/20 pt-5 mt-auto">
+
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Business Consulting
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16}/>
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Website & App Development -->
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3">
+Website and App Development
+</h2>
+
+<p class="text-[14px] text-black/70">
+We design and develop high-performance digital platforms engineered for scalability, speed, and conversion.
+</p>
+
+<div class="flex flex-wrap gap-2">
+{devTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+</div>
+
+<div class="border-t border-black/20 pt-5 mt-auto">
+
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Website and App Development
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16}/>
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Product Development -->
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3">
+Technology and Product Development
+</h2>
+
+<p class="text-[14px] text-black/70">
+We build scalable SaaS platforms, MVPs, and enterprise-grade systems.
+</p>
+
+<div class="flex flex-wrap gap-2">
+{productTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+</div>
+
+<div class="border-t border-black/20 pt-5 mt-auto">
+
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Technology and Product Development
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16}/>
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Analytics -->
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3">
+Performance and Analytics
+</h2>
+
+<p class="text-[14px] text-black/70">
+We transform data into strategic intelligence through structured tracking systems.
+</p>
+
+<div class="flex flex-wrap gap-2">
+{analyticsTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+</div>
+
+<div class="border-t border-black/20 pt-5 mt-auto">
+
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Performance and Analytics
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16}/>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Market Research -->
+
+<div class="mt-6">
+
+<div class="bg-black/[0.05] p-8 rounded-[12px] flex flex-col gap-5">
+
+<h2 class="text-[20px] lg:text-[24px] font-semibold border-l-[3px] border-[#EE5125] pl-3">
+Market Research and Consumer Insights
+</h2>
+
+<p class="text-[14px] text-black/70">
+We conduct structured research to uncover consumer behavior, competitive landscapes, and emerging market opportunities.
+</p>
+
+<div class="flex flex-wrap gap-2">
+
+{researchTags.map(tag => (
+<span class="px-3 py-1.5 bg-black/[0.06] rounded-full text-[12px]">{tag}</span>
+))}
+
+</div>
+
+<div class="border-t border-black/20 pt-5">
+
+<button class="group flex items-center gap-2 bg-white px-5 py-2 rounded-full text-[14px] hover:text-[#EE5125] transition w-fit shadow-sm">
+
+<span class="relative">
+Market Research and Consumer Insights
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ArrowRight size={16}/>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>

@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import BrandStrategyHero from "../../../components/services/brand-strategy/BrandStrategyHero.astro";
+import BrandStrategyMarquee from "../../../components/services/brand-strategy/Marquee.astro";
+import BrandStrategyServices from "../../../components/services/brand-strategy/OurServices.astro";
+import BrandStrategyStrategy from "../../../components/services/brand-strategy/TurningStrategy.astro";
+import BrandStrategyCategory from "../../../components/services/brand-strategy/Category.jsx";
+import BrandStrategyWhyChoose from "../../../components/services/brand-strategy/WhyChooseMarcamor.astro";
+import BrandStrategyFaq from "../../../components/services/brand-strategy/BrandStrategyFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Brand Strategy Services">
+
+<BrandStrategyHero />
+
+<BrandStrategyMarquee />
+
+<BrandStrategyServices />
+
+<BrandStrategyStrategy />
+
+<BrandStrategyCategory client:load />
+
+<BrandStrategyWhyChoose />
+
+<BrandStrategyFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

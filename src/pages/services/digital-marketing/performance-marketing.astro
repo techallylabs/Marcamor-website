@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import PerformanceHero from "../../../components/services/performance-marketing/PerformanceHero.astro";
+import PerformanceMarquee from "../../../components/services/performance-marketing/Marquee.astro";
+import PerformanceServices from "../../../components/services/performance-marketing/OurServices.astro";
+import PerformanceStrategy from "../../../components/services/performance-marketing/TurningStrategy.astro";
+import PerformanceCategory from "../../../components/services/performance-marketing/Category.jsx";
+import PerformanceWhyChoose from "../../../components/services/performance-marketing/WhyChooseMarcamor.astro";
+import PerformanceFaq from "../../../components/services/performance-marketing/SeoFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Performance Marketing Services">
+
+  <PerformanceHero />
+
+  <PerformanceMarquee />
+
+  <PerformanceServices />
+
+  <PerformanceStrategy />
+
+  <PerformanceCategory client:load />
+
+  <PerformanceWhyChoose />
+
+  <PerformanceFaq client:load />
+
+  <ContactUs />
+
+  <FooterSection />
+
+</Layout>

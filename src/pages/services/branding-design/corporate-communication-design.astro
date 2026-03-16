@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import CorporateHero from "../../../components/services/corporate-communication-design/CorporateHero.astro";
+import CorporateMarquee from "../../../components/services/corporate-communication-design/Marquee.astro";
+import CorporateServices from "../../../components/services/corporate-communication-design/OurServices.astro";
+import CorporateStrategy from "../../../components/services/corporate-communication-design/TurningStrategy.astro";
+import CorporateCategory from "../../../components/services/corporate-communication-design/Category.jsx";
+import CorporateWhyChoose from "../../../components/services/corporate-communication-design/WhyChooseMarcamor.astro";
+import CorporateFaq from "../../../components/services/corporate-communication-design/CorporateFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Corporate Communication Design Services">
+
+<CorporateHero />
+
+<CorporateMarquee />
+
+<CorporateServices />
+
+<CorporateStrategy />
+
+<CorporateCategory client:load />
+
+<CorporateWhyChoose />
+
+<CorporateFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

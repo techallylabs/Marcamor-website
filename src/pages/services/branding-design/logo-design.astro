@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import LogoHero from "../../../components/services/logo-design/LogoHero.astro";
+import LogoMarquee from "../../../components/services/logo-design/Marquee.astro";
+import LogoServices from "../../../components/services/logo-design/OurServices.astro";
+import LogoStrategy from "../../../components/services/logo-design/TurningStrategy.astro";
+import LogoCategory from "../../../components/services/logo-design/Category.jsx";
+import LogoWhyChoose from "../../../components/services/logo-design/WhyChooseMarcamor.astro";
+import LogoFaq from "../../../components/services/logo-design/LogoFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Logo Design Services">
+
+<LogoHero />
+
+<LogoMarquee />
+
+<LogoServices />
+
+<LogoStrategy />
+
+<LogoCategory client:load />
+
+<LogoWhyChoose />
+
+<LogoFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

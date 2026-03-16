@@ -1,0 +1,38 @@
+---
+
+const workBg = "/images/workBg.png";
+const workMobileBg = "/images/workMbBg.png";
+
+---
+
+<div class="relative text-white lg:min-h-[350px] min-h-[500px]">
+
+  <!-- Desktop Background -->
+  <div
+    class="hidden lg:block absolute inset-0 bg-center bg-cover"
+    style={`background-image: url(${workBg})`}
+  ></div>
+
+  <!-- Mobile Background -->
+  <div
+    class="lg:hidden absolute inset-0 bg-center bg-cover"
+    style={`background-image: url(${workMobileBg})`}
+  ></div>
+
+  <!-- Content -->
+  <div class="relative max-w-[1440px] mx-auto w-[90%] py-20">
+    <div class="flex flex-col items-center justify-center gap-4 text-center">
+
+      <h2 class="text-[36px] md:text-[48px] lg:text-[60px] font-semibold">
+        Our Latest Work
+      </h2>
+
+      <p class="text-[14px] lg:text-[16px]">
+        Our goal is to nurture your vision and provide innovative, custom
+        solutions for all your marketing needs.
+      </p>
+
+    </div>
+  </div>
+
+</div>

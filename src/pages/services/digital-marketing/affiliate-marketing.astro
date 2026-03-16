@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import AffiliateHero from "../../../components/services/affiliate-marketing/AffiliateHero.astro";
+import AffiliateMarquee from "../../../components/services/affiliate-marketing/Marquee.astro";
+import AffiliateServices from "../../../components/services/affiliate-marketing/OurServices.astro";
+import AffiliateStrategy from "../../../components/services/affiliate-marketing/TurningStrategy.astro";
+import AffiliateCategory from "../../../components/services/affiliate-marketing/Category.jsx";
+import AffiliateWhyChoose from "../../../components/services/affiliate-marketing/WhyChooseMarcamor.astro";
+import AffiliateFaq from "../../../components/services/affiliate-marketing/AffiliateFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Affiliate Marketing Services">
+
+<AffiliateHero />
+
+<AffiliateMarquee />
+
+<AffiliateServices />
+
+<AffiliateStrategy />
+
+<AffiliateCategory client:load />
+
+<AffiliateWhyChoose />
+
+<AffiliateFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

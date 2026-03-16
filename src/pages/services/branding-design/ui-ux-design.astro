@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import UiUxHero from "../../../components/services/ui-ux-design/UiUxHero.astro";
+import UiUxMarquee from "../../../components/services/ui-ux-design/Marquee.astro";
+import UiUxServices from "../../../components/services/ui-ux-design/OurServices.astro";
+import UiUxStrategy from "../../../components/services/ui-ux-design/TurningStrategy.astro";
+import UiUxCategory from "../../../components/services//ui-ux-design/Category.jsx";
+import UiUxWhyChoose from "../../../components/services//ui-ux-design/WhyChooseMarcamor.astro";
+import UiUxFaq from "../../../components/services/ui-ux-design/UiUxFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="UI UX Design Services">
+
+<UiUxHero />
+
+<UiUxMarquee />
+
+<UiUxServices />
+
+<UiUxStrategy />
+
+<UiUxCategory client:load />
+
+<UiUxWhyChoose />
+
+<UiUxFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>
