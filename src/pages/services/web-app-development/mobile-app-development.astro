@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import MobileHero from "../../../components/services/mobile-app-development/MobileHero.astro";
+import MobileMarquee from "../../../components/services/mobile-app-development/Marquee.astro";
+import MobileServices from "../../../components/services/mobile-app-development/OurServices.astro";
+import MobileStrategy from "../../../components/services/mobile-app-development/TurningStrategy.astro";
+import MobileCategory from "../../../components/services/mobile-app-development/Category.jsx";
+import MobileWhyChoose from "../../../components/services/mobile-app-development/WhyChooseMarcamor.astro";
+import MobileFaq from "../../../components/services/mobile-app-development/MobileFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Mobile App Development Services (Android & iOS)">
+
+<MobileHero />
+
+<MobileMarquee />
+
+<MobileServices />
+
+<MobileStrategy />
+
+<MobileCategory client:load />
+
+<MobileWhyChoose />
+
+<MobileFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

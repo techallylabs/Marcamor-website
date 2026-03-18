@@ -38,7 +38,7 @@ function Category() {
               rounded-xl
               text-sm font-medium
               lg:h-[84px] h-[54px]
-              min-w-[230px] lg:min-w-[308px]
+              min-w-[230px] lg:min-w-[300px]
               transition-all duration-300
               ${
                 active === index

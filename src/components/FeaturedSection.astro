@@ -1,0 +1,86 @@
+---
+import { Clock3, CalendarDays } from "lucide-react";
+
+
+const posts = [
+  {
+    image: "/images/insights5.svg",
+    title: "Why Branding Is a Long Term Business Asset",
+    type: "Branding",
+    date: "Mar 07, 2025",
+    time: "15 min",
+  },
+  {
+    image: "/images/insights6.svg",
+    title: "Understanding the Difference Between Traffic and Revenue Growth",
+    type: "Marketing",
+    date: "Mar 07, 2025",
+    time: "20 min",
+  },
+  {
+    image: "/images/insights7.svg",
+    title: "How Digital Infrastructure Impacts Business Scalability",
+    type: "Business",
+    date: "Mar 07, 2025",
+    time: "30 min",
+  },
+  {
+    image: "/images/insights8.svg",
+    title: "Why Businesses Are Rebuilding Their Digital Platforms",
+    type: "Technology",
+    date: "Mar 07, 2025",
+    time: "40 min",
+  },
+];
+---
+
+<section class="bg-black text-white py-[60px]">
+
+  <div class="max-w-[1440px] mx-auto w-[90%]">
+
+    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
+
+      {posts.map((post, index) => (
+        <article class="group space-y-5 cursor-pointer">
+
+          <!-- IMAGE -->
+          <div class="w-full aspect-[16/10] rounded-xl overflow-hidden">
+            <img
+              src={post.image}
+              alt={post.title}
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- META -->
+          <div class="flex items-center flex-wrap gap-2 text-[10px]">
+
+            <span class="bg-white/10 px-3 py-1 rounded-full uppercase tracking-wide">
+              {post.type}
+            </span>
+
+            <span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full uppercase">
+              <Clock3 size={12} />
+              {post.time}
+            </span>
+
+            <span class="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full uppercase">
+              <CalendarDays size={12} />
+              {post.date}
+            </span>
+
+          </div>
+
+          <!-- TITLE -->
+          <h3 class="text-[14px] font-medium leading-snug transition-colors group-hover:text-[#F05623]">
+            {post.title}
+          </h3>
+
+        </article>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>

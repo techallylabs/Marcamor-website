@@ -1,55 +1,81 @@
 ---
 import { ChevronRight } from "lucide-react";
 
-const caseStudies = [
+const cards = [
   {
-    title: "TSRTC",
-    desc: "SEO-led traffic growth for Telangana State Road Transport Corporation by optimizing...",
+    image: "/images/411.svg",
+    type: "WEBSITE",
+    title: "411 Locals",
+    dec: "Driving consistent lead generation for local businesses through SEO and performance marketing.",
     deliverables: ["Website", "SEO"],
-    industry: "Transport",
-    liveLink: "https://example1.com",
+    industry: "Internet Advertising & <br/> Digital Marketing Solutions",
+    liveLink: "#"
+  },
+  {
+    image: "/images/pedigree.svg",
+    type: "WEBSITE",
+    title: "Pedigree",
+    dec: "Building a strong social media presence through engaging, community-driven content.",
+    deliverables: ["Marketing", "Social Media Strategy"],
+    industry: "Pet Care",
+    liveLink: "#"
+  },
+  {
     image: "/images/tsrtc.png",
+    type: "WEBSITE",
+    title: "TSRTC",
+    dec: "SEO-led traffic growth for Telangana State Road Transport Corporation by optimizing route-based searches, targeting the “Mahalakshmi Pathakam” scheme, and building structured FAQ-driven content to capture commuter search intent.",
+    deliverables: ["SEO", "Content Strategy", "Traffic Growth"],
+    industry: "Transportation",
+    liveLink: "#"
   },
   {
-    title: "Turito",
-    desc: "Scaled organic traffic through strategic keyword targeting across high-difficulty academic...",
-    deliverables: ["Website", "SEO"],
-    industry: "education",
-    liveLink: "https://example1.com",
-    image: "/images/turitobg.png",
+    image: "/images/namhya.svg",
+    type: "WEBSITE",
+    title: "Namhya Foods",
+    dec: "Scaling a wellness brand’s digital growth through integrated marketing and high-impact SEO strategies.",
+    deliverables: ["Website", "Website Development"],
+    industry: "Ayurvedic & Natural Health Products",
+    liveLink: "https://namhyafoods.com/"
   },
   {
-    title: "Daughter Earth",
-    desc: "Scaled paid media campaigns for a D2C beauty brand, achieving 4–5x ROAS while managing...",
-    deliverables: ["Performance Marketing", "Performance Marketing"],
-    industry: "beauty",
-    liveLink: "https://example3.com",
-    image: "/images/earth.svg",
+    image: "/images/kankatala12.svg",
+    type: "WEBSITE",
+    title: "Kankatala",
+    dec: "Growing a traditional fashion brand’s digital presence through culturally driven social media...",
+    deliverables: ["Marketing", "Social Media Strategy"],
+    industry: "Fashion & Apparel",
+    liveLink: "https://namhyafoods.com/"
   },
   {
-    title: "Vedantu",
-    desc: "Delivered high-performing paid campaigns for the EdTech platform, achieving 9x ROAS while...",
-    deliverables: ["Performance Marketing", "Performance Marketing"],
-    industry: "Education",
-    liveLink: "https://example4.com",
-    image: "/images/vedantubg.svg",
+    image: "/images/punjab-de-sher.svg",
+    type: "WEBSITE",
+    title: "Punjab De Sher",
+    dec: "Driving fan engagement and ticket sales for a sports entertainment brand through high-volume...",
+    deliverables: ["Website", "Website Redevelopment"],
+    industry: "Sports Entertainment",
+    liveLink: "https://punjabdesher.com/"
   },
-  {
-    title: "V Sparkel",
-    desc: "Scaled Instagram presence from 50K to 300K+ followers through high-engagement reels,...",
-    deliverables: ["Social Media Marketing", "Social Media Marketing"],
-    industry: "beauty",
-    liveLink: "https://example5.com",
-    image: "/images/sparkelbg.svg",
+   {
+    image: "/images/ecl.svg",
+    type: "WEBSITE",
+    title: "Entertainers Cricket League (ECL)",
+    dec: "Driving player registrations and digital visibility for a sports entertainment league through integrated...",
+    deliverables: ["Website", "Website Redevelopment"],
+    industry: "Sports Entertainment",
+    liveLink: "https://eclt10.in/"
   },
-  {
-    title: "upGrad",
-    desc: "Expanded Instagram community from 30K to 240K+ followers by leveraging career-focused reels,...",
-    deliverables: ["Social Media Marketing", "Social Media Marketing"],
-    industry: "education",
-    liveLink: "https://example5.com",
-    image: "/images/upgradbg.svg",
-  },
+   {
+    image: "/images/meehu.svg",
+    type: "WEBSITE",
+    title: "Meechu",
+    dec: "Building a strong digital foundation for a baby care brand through strategy, branding, and performance...",
+    deliverables: ["Website", "Website Redevelopment"],
+    industry: "Baby Care & Consumer Products",
+    liveLink: "https://eclt10.in/"
+  }
+  
+  
 ];
 ---
 
@@ -91,9 +117,7 @@ FILTER WITH TAGS
 <button
 class="whitespace-nowrap text-[14px] font-medium rounded-full px-4 py-1.5 transition bg-[#0000000D] border border-[#00000026] hover:bg-black/10"
 >
-
 {tag}
-
 </button>
 
 ))}
@@ -103,31 +127,26 @@ class="whitespace-nowrap text-[14px] font-medium rounded-full px-4 py-1.5 transi
 </div>
 
 
-{caseStudies.map(item => (
+{cards.map(item => (
 
 <div class="grid grid-cols-1 xl:grid-cols-[1fr_801px] gap-8 items-stretch">
 
 <!-- LEFT -->
-
 <div class="space-y-4 lg:space-y-6 h-full flex flex-col">
 
 <div>
-
 <h2 class="text-[28px] sm:text-[32px] lg:text-[36px] font-semibold mb-2">
 {item.title}
 </h2>
 
-<p class="text-[15px] sm:text-[16px] text-black max-w-lg">
-{item.desc}
+<p class="text-[15px] sm:text-[16px] font-medium text-black max-w-lg">
+{item.dec}
 </p>
-
 </div>
 
-
-<div class="flex flex-wrap items-start gap-10">
+<div class="flex flex-wrap items-start gap-2">
 
 <div>
-
 <p class="text-[12px] tracking-widest text-black/50 mb-2 font-semibold">
 DELIVERABLES
 </p>
@@ -135,38 +154,28 @@ DELIVERABLES
 {item.deliverables.map(d => (
 <p class="font-semibold">{d}</p>
 ))}
-
 </div>
-
 
 <div class="hidden lg:block w-px bg-black/20 h-16"></div>
 
-
 <div>
-
 <p class="text-[12px] tracking-widest text-black/50 mb-2 font-semibold">
 INDUSTRY
 </p>
 
-<p class="font-semibold capitalize">
-{item.industry}
-</p>
+<!-- ✅ FIXED HERE -->
+<p class="font-medium capitalize" set:html={item.industry}></p>
 
 </div>
 
 </div>
-
 
 <div class="flex flex-wrap gap-4">
 
 <button class="h-[44px] px-6 rounded-full text-[13px] font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] flex items-center gap-2 text-white">
-
 View Case Study
-
 <ChevronRight size={16}/>
-
 </button>
-
 
 <a
 href={item.liveLink}
@@ -174,27 +183,22 @@ target="_blank"
 rel="noopener noreferrer"
 class="h-[44px] px-6 rounded-full text-[13px] font-semibold border border-[#00000026] flex items-center gap-2 hover:bg-black/5 transition"
 >
-
 Live Site
-
 <ChevronRight size={16}/>
-
 </a>
 
 </div>
 
-
+<!-- SMALL IMAGE -->
 <div class="hidden lg:block mt-auto">
 
 <div
 class="relative w-[440px] h-[234px] rounded-[18px] overflow-hidden bg-center bg-cover"
 style={`background-image: url(${item.image})`}
 >
-
-<button class="bg-white text-black rounded-[14px] px-4 py-1 text-[12px] absolute top-4 left-4 font-medium shadow">
+<button class="bg-white hidden text-black rounded-[14px] px-4 py-1 text-[12px] absolute top-4 left-4 font-medium shadow">
 Hover to Scroll
 </button>
-
 </div>
 
 </div>
@@ -203,7 +207,6 @@ Hover to Scroll
 
 
 <!-- RIGHT IMAGE -->
-
 <div class="w-full lg:w-[801px] h-full rounded-[10px] lg:rounded-[14px] overflow-hidden">
 
 <img

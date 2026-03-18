@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import SalesHero from "../../../components/services/sales-revenue-strategy/SalesHero.astro";
+import SalesMarquee from "../../../components/services/sales-revenue-strategy/Marquee.astro";
+import SalesServices from "../../../components/services/sales-revenue-strategy/OurServices.astro";
+import SalesStrategy from "../../../components/services/sales-revenue-strategy/TurningStrategy.astro";
+import SalesCategory from "../../../components/services/sales-revenue-strategy/Category.jsx";
+import SalesWhyChoose from "../../../components/services/sales-revenue-strategy/WhyChooseMarcamor.astro";
+import SalesFaq from "../../../components/services/sales-revenue-strategy/SalesFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Sales and Revenue Strategy Consulting">
+
+<SalesHero />
+
+<SalesMarquee />
+
+<SalesServices />
+
+<SalesStrategy />
+
+<SalesCategory client:load />
+
+<SalesWhyChoose />
+
+<SalesFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

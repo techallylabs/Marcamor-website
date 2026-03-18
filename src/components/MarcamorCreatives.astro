@@ -3,50 +3,64 @@ import { ChevronRight } from "lucide-react";
 import Clients1 from "./Clients1.astro";
 
 const techStack = [
-  "Search Engine Optimization",
-  "Email Marketing",
-  "Performance Marketing",
-  "Content Marketing",
-  "Social Media Marketing",
-  "Affiliate Marketing",
-  "Influencer Marketing",
-  "YouTube Marketing",
-  "WhatsApp Marketing",
+ { name: "Search Engine Optimization", link: "/services/digital-marketing/seo" },
+  { name: "Email Marketing", link: "/services/digital-marketing/email-marketing" },
+  { name: "Performance Marketing", link: "/services/digital-marketing/performance-marketing" },
+  { name: "Content Marketing", link: "/services/digital-marketing/content-marketing" },
+  { name: "Social Media Marketing", link: "/services/digital-marketing/social-media-marketing" },
+  { name: "Affiliate Marketing", link: "/services/digital-marketing/affiliate-marketing" },
+  { name: "Influencer Marketing", link: "/services/digital-marketing/influencer-marketing" },
+  { name: "YouTube Marketing", link: "/services/digital-marketing/youtube-marketing" },
+  { name: "WhatsApp Marketing", link: "/whatsapp-marketing" },
+];
+const appDev = [
+  { name: "Custom Web and App Design", link: "/web-app-design" },
+  { name: "E-commerce Development", link: "/ecommerce" },
+  { name: "Mobile App Development Android iOS", link: "/mobile-app" },
+  { name: "API Integration", link: "/api-integration" },
+  { name: "Maintenance and AMC Plans", link: "/maintenance" },
 ];
 
+const performance = [
+  { name: "Marketing Analytics and BI Reporting", link: "/analytics" },
+  { name: "GTM and Analytics", link: "/gtm" },
+  { name: "Heatmap and Behavior Tracking", link: "/heatmap" },
+  { name: "KPI Dashboard Setup", link: "/kpi-dashboard" },
+  { name: "Conversion Optimization", link: "/conversion" },
+];
 const bussinessConsulting = [
-  "Startup and SME Consulting",
-  "Go To Market Strategy",
-  " Franchise Consulting",
-  "Sales and Revenue Strategy",
-  "Business Process Optimization",
+  { name: "Startup and SME Consulting", link: "/services/business-consulting/startup-sme-consulting" },
+  { name: "Go To Market Strategy", link: "/services/business-consulting/go-to-market-strategy" },
+  { name: "Franchise Consulting", link: "/services/business-consulting/franchise-consulting" },
+  { name: "Sales and Revenue Strategy", link: "/services/business-consulting/sales-revenue-strategy" },
+  { name: "Business Process Optimization", link: "/services/business-consulting/business-process-optimization" },
 ];
 
 const productDev = [
-  "SaaS Product Development",
-  "MVP Building for Startups",
-  "No Code and Low Code Development",
-  "ERP and CRM Integration",
+  { name: "SaaS Product Development", link: "/saas-development" },
+  { name: "MVP Building for Startups", link: "/mvp-development" },
+  { name: "No Code and Low Code Development", link: "/no-code" },
+  { name: "ERP and CRM Integration", link: "/erp-crm" },
 ];
 
 const brand = [
-  "Brand Strategy",
-  "Logo Design",
-  "Brand Identity and Guidelines",
-  "Packaging Design",
-  "Corporate Communication Design",
-  "UI/UX Design",
+  { name: "Brand Strategy", link: "/services/branding-design/brand-strategy" },
+  { name: "Logo Design", link: "/services/branding-design/logo-design" },
+  { name: "Brand Identity and Guidelines", link: "/services/branding-design/brand-identity-guidelines" },
+  { name: "Packaging Design", link: "/services/branding-design/packaging-design" },
+  { name: "Corporate Communication Design", link: "/services/branding-design/corporate-communication-design" },
+  { name: "UI/UX Design", link: "/services/branding-design/ui-ux-design" },
 ];
 
 const marketing = [
-  "Market Feasibility Studies",
-  "Consumer Behavior Analysis",
-  "Competitor Analysis",
-  " Brand Perception Studies",
-  "Industry and Trends Reports",
-  "Customer Segmentation and Process Building",
-  " Product Testing and Feedback Loops",
-  " Geographical Market Entry Studies",
+  { name: "Market Feasibility Studies", link: "/market-feasibility" },
+  { name: "Consumer Behavior Analysis", link: "/consumer-behavior" },
+  { name: "Competitor Analysis", link: "/competitor-analysis" },
+  { name: "Brand Perception Studies", link: "/brand-perception" },
+  { name: "Industry and Trends Reports", link: "/industry-trends" },
+  { name: "Customer Segmentation and Process Building", link: "/customer-segmentation" },
+  { name: "Product Testing and Feedback Loops", link: "/product-testing" },
+  { name: "Geographical Market Entry Studies", link: "/market-entry" },
 ];
 ---
 
@@ -80,7 +94,7 @@ style="background-image:url('/images/tsrtc.png')"
 TSRTC
 </h2>
 
-<button class="group inline-flex items-center gap-2 px-3 h-[34px] rounded-full text-[12px] font-semibold bg-white">
+<button class="group inline-flex cursor-pointer items-center gap-2 px-3 h-[34px] rounded-full text-[12px] font-semibold bg-white">
 <span class="relative">
 READ OUR CASE
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
@@ -93,21 +107,23 @@ READ OUR CASE
 
 <div class="flex gap-[16px] w-full lg:w-auto">
 
-<button class="group inline-flex items-center gap-2 h-[42px] px-6 rounded-full text-[12px] font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] text-white">
+<!-- <button class="group inline-flex hidden items-center gap-2 h-[42px] px-6 rounded-full text-[12px] font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] text-white">
 <span class="relative">
 REQUEST A PROPOSAL
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
-</button>
+</button> -->
 
-<button class="group inline-flex self-start items-center gap-2 h-[42px] px-4 rounded-full text-[12px] font-semibold border border-black/50 uppercase">
+<a href="/requestproposal" class="cursor-pointer">
+  <button class="group  inline-flex self-start  cursor-pointer items-center gap-2 h-[42px] px-4 rounded-full text-[12px] font-semibold border border-black/50 uppercase">
 <span class="relative">
 CONTACT US
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-black transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
 </button>
+</a>
 
 </div>
 
@@ -121,155 +137,167 @@ Marcamor Creative Services
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
 
-<!-- CARD 1 -->
+<!-- 1 Digital -->
 <div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
 <h2 class="lg:text-[24px] text-[20px] font-semibold">Digital Marketing</h2>
 <p class="text-[14px]">
-At Marcamor, we design integrated digital growth systems
-that combine organic visibility, paid acquisition, and
-audience engagement into one measurable framework.
+At Marcamor, we design integrated digital growth systems that combine organic visibility, paid acquisition, and audience engagement into one measurable framework. Our strategies are built on data intelligence, funnel optimization, and performance tracking to ensure consistent and scalable revenue growth across digital channels.
 </p>
-
 <div class="flex flex-wrap gap-[4px]">
 {techStack.map(item => (
-<button class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">{item}</button>
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
+))}
+</div>
+<div class="bg-black/40 h-[1px] mt-auto"></div>
+<a href="/services/digital-marketing"
+class="group self-start  inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+
+<span class="relative">
+Digital Marketing
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+
+<ChevronRight size={16}/>
+</a>
+</div>
+
+<!-- 2 Branding -->
+<div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
+<h2 class="lg:text-[24px] text-[20px] font-semibold">Branding and Design</h2>
+<p class="text-[14px]">
+We build structured brand ecosystems that align strategy, identity, and communication into a cohesive market presence. From positioning and visual systems to corporate communication design, we create brands that are distinctive, scalable, and built for long-term relevance.
+</p>
+<div class="flex flex-wrap gap-[4px]">
+{brand.map(item => (
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
+))}
+</div>
+<div class="bg-black/20 h-[1px] mt-auto"></div>
+<a href="/services/branding-design/branding-design" class="group self-start  inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+<span class="relative">Branding and Design
+<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
+</span>
+<ChevronRight size={16}/>
+</a>
+</div>
+
+<!-- 3 Business -->
+<div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
+<h2 class="lg:text-[24px] text-[20px] font-semibold">Business Consulting</h2>
+<p class="text-[14px]">
+Our consulting division focuses on structured business growth, operational efficiency, and scalable revenue models. We help startups, SMEs, and expanding enterprises align strategy with execution to accelerate market positioning and sustainable expansion.
+</p>
+<div class="flex flex-wrap gap-[4px]">
+{bussinessConsulting.map(item => (
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
 ))}
 </div>
 
 <div class="bg-black/40 h-[1px] mt-auto"></div>
-
-<button class="group inline-flex self-start items-center gap-2 px-4 h-10 rounded-full text-[12px] font-semibold border border-black/50 uppercase hover:bg-black hover:text-white transition-all duration-300">
-<span class="relative">Digital Marketing
+<a href="/services/business-consulting/business-consulting" class="group self-start  inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+<span class="relative">Business Consulting
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
-</button>
-
+</a>
 </div>
 
-<!-- CARD 2 -->
+<!-- 4 Website -->
 <div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
-
-<h2 class="lg:text-[24px] text-[20px] font-semibold">
-Business Consulting
-</h2>
-
+<h2 class="lg:text-[24px] text-[20px] font-semibold">Website and App Development</h2>
 <p class="text-[14px]">
-Our consulting division focuses on structured business
-growth, operational efficiency, and scalable revenue models.
+We design and develop high-performance digital platforms engineered for scalability, speed, and conversion. Our development frameworks combine user experience strategy with modern technology stacks to build secure, future-ready digital infrastructure.
 </p>
-
 <div class="flex flex-wrap gap-[4px]">
-{bussinessConsulting.map(item => (
-<button class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">{item}</button>
+{appDev.map(item => (
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
 ))}
 </div>
 
-<div class="bg-black/20 h-[1px] mt-auto"></div>
-
-<button class="group inline-flex self-start items-center gap-2 px-4 h-10 rounded-full text-[12px] font-semibold border border-black/50 uppercase hover:bg-black hover:text-white transition-all duration-300">
-<span class="relative">
-Business Consulting
+<div class="bg-black/40 h-[1px] mt-auto"></div>
+<a href="/website-app-development" class="group self-start inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+<span class="relative">Website and App Development
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
-</button>
-
+</a>
 </div>
 
-<!-- CARD 3 -->
+<!-- 5 Tech -->
 <div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
-
-<h2 class="lg:text-[24px] text-[20px] font-semibold">
-Technology and Product Development
-</h2>
-
+<h2 class="lg:text-[24px] text-[20px] font-semibold">Technology and Product Development</h2>
 <p class="text-[14px]">
-We build scalable SaaS platforms, MVPs, and enterprise-grade
-systems that support innovation and operational growth.
+We build scalable SaaS platforms, MVPs, and enterprise-grade systems that support innovation and operational growth. Our product development approach emphasizes modular architecture, performance optimization, and long-term adaptability.
 </p>
-
 <div class="flex flex-wrap gap-[4px]">
 {productDev.map(item => (
-<button class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">{item}</button>
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
 ))}
 </div>
 
-<div class="bg-black/20 h-[1px]"></div>
-
-<button class="group inline-flex self-start items-center gap-2 px-4 h-10 rounded-full text-[12px] font-semibold border border-black/50 uppercase hover:bg-black hover:text-white transition-all duration-300">
-<span class="relative">
-Technology and Product Development
+<div class="bg-black/40 h-[1px] mt-auto"></div>
+<a href="/technology-product-development" class="group self-start  inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+<span class="relative">Technology and Product Development
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
-</button>
-
+</a>
 </div>
 
-<!-- CARD 4 -->
+<!-- 6 Performance -->
 <div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
-
-<h2 class="lg:text-[24px] text-[20px] font-semibold">
-Branding and Design
-</h2>
-
+<h2 class="lg:text-[24px] text-[20px] font-semibold">Performance and Analytics</h2>
 <p class="text-[14px]">
-We build structured brand ecosystems that align strategy,
-identity, and communication into a cohesive market presence.
+We transform data into strategic intelligence through structured tracking systems, performance dashboards, and continuous optimization cycles. Our analytics frameworks empower businesses to make informed decisions and drive measurable improvements.
 </p>
-
 <div class="flex flex-wrap gap-[4px]">
-{brand.map(item => (
-<button class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">{item}</button>
+
+{performance.map(item => (
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
 ))}
 </div>
 
-<div class="bg-black/20 h-[1px]"></div>
-
-<button class="group inline-flex self-start items-center gap-2 px-4 h-10 rounded-full text-[12px] font-semibold border border-black/50 uppercase hover:bg-black hover:text-white transition-all duration-300">
-<span class="relative">
-Branding and Design
+<div class="bg-black/40 h-[1px] mt-auto"></div>
+<a href="/performance-analytics" class="group self-start  inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+<span class="relative">Performance and Analytics
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
-</button>
-
+</a>
 </div>
 
 </div>
-
-<!-- LAST CARD -->
-
-<div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px] mt-[24px]">
-
-<h2 class="lg:text-[24px] text-[20px] font-semibold">
-Market Research and Consumer Insights
-</h2>
-
+<div class="bg-white rounded-[10px] w-full flex flex-col px-[24px] py-[34px] gap-[24px]">
+<h2 class="lg:text-[24px] text-[20px] font-semibold">Market Research and Consumer Insights</h2>
 <p class="text-[14px]">
-We conduct structured research to uncover consumer behavior,
-competitive landscapes, and emerging market opportunities.
-</p>
-
+We conduct structured research to uncover consumer behavior, competitive landscapes, and emerging market opportunities. Our insights-driven methodologies support confident decision-making and strategic expansion planning.</p>
 <div class="flex flex-wrap gap-[4px]">
 {marketing.map(item => (
-<button class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">{item}</button>
+<a href={item.link} class="px-3 py-1.5 text-[12px] font-medium text-black bg-[#f5f5f5] rounded-full uppercase">
+  {item.name}
+</a>
 ))}
 </div>
-
-<div class="bg-black/20 h-[1px]"></div>
-
-<button class="group inline-flex self-start items-center gap-2 px-4 h-10 rounded-full text-[12px] font-semibold border border-black/50 uppercase hover:bg-black hover:text-white transition-all duration-300">
-<span class="relative">
-Market Research and Consumer Insights
+<div class="bg-black/20 h-[1px] mt-auto"></div>
+<a href="/market-research" class="group self-start inline-flex items-center gap-2 px-4 h-10 rounded-full text-[12px] border border-black/50 uppercase hover:bg-black hover:text-white">
+<span class="relative">Market Research and Consumer Insights
 <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-current transition-all duration-300 group-hover:w-full"></span>
 </span>
 <ChevronRight size={16}/>
-</button>
-
+</a>
 </div>
-
 </div>
 
 </div>

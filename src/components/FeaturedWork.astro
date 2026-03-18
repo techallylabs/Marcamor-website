@@ -2,6 +2,18 @@
 import { ChevronRight } from "lucide-react";
 
 const cards = [
+    {
+    imageBg: "/images/411.svg",
+    type: "WEBSITE",
+    title: "411 Locals",
+    dec: "Driving consistent lead generation for local businesses through SEO and performance marketing."
+  },
+     {
+    imageBg: "/images/pedigree.svg",
+    type: "WEBSITE",
+    title: "Pedigree",
+    dec: "Building a strong social media presence through engaging, community-driven content."
+  },
   {
     imageBg: "/images/tsrtc.png",
     type: "WEBSITE",
@@ -9,10 +21,10 @@ const cards = [
     dec: "SEO-led traffic growth for Telangana State Road Transport Corporation by optimizing route-based searches, targeting the “Mahalakshmi Pathakam” scheme, and building structured FAQ-driven content to capture commuter search intent."
   },
   {
-    imageBg: "/images/turitobg.png",
+    imageBg: "/images/namhya.svg",
     type: "WEBSITE",
-    title: "Turito",
-    dec: "Scaled organic traffic through strategic keyword targeting across high-difficulty academic subjects, supported by structured content clusters and solution-driven pages for student search queries."
+    title: "Namhya Foods",
+    dec: "Scaling a wellness brand’s digital growth through integrated marketing and high-impact SEO strategies."
   }
 ];
 ---
@@ -45,19 +57,22 @@ custom solutions for all your marketing needs.
 
 <div class="lg:flex lg:flex-col flex sm:flex-row lg:flex-col gap-4">
 
-<button
-class="group h-[42px] w-full sm:w-[212px] rounded-full text-[10px] lg:text-xs font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] text-white flex items-center justify-center gap-2"
->
-<span class="relative">
-REQUEST A PROPOSAL
-<span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
-</span>
+<a href="/work">
+           <button
+            class="group relative  cursor-pointer h-[43px] uppercase min-w-[146px] px-6 rounded-full text-[12px] font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] flex items-center justify-center gap-2 text-white"
+          >
+            <span class="relative">
+           Explore all
+              <span class="absolute left-0 -bottom-1 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+            </span>
 
-<ChevronRight size={16}/>
-</button>
+            <ChevronRight size={16} />
+          </button>
+         </a>
 
-<button
-class="group h-[42px] w-full sm:w-[150px] text-[10px] lg:text-xs rounded-full font-semibold border border-black/50 flex items-center justify-center gap-2 uppercase transition-all duration-300"
+<a href="/requestproposal" class="cursor-pointer">
+  <button
+class="group h-[42px] cursor-pointer w-full sm:w-[150px] text-[10px] lg:text-xs rounded-full font-semibold border border-black/50 flex items-center justify-center gap-2 uppercase transition-all duration-300"
 >
 <span class="relative">
 CONTACT US
@@ -66,6 +81,7 @@ CONTACT US
 
 <ChevronRight size={16}/>
 </button>
+</a>
 
 </div>
 </div>
@@ -112,10 +128,12 @@ style={`background-image:url('${item.imageBg}')`}
 {item.dec}
 </p>
 
-<button class="h-[42px] px-6 rounded-full text-xs font-semibold bg-white text-black flex items-center gap-2 hover:scale-105 transition w-fit">
+<a href="#">
+  <button class="h-[42px] px-6 cursor-pointer  rounded-full text-xs font-semibold bg-white text-black flex items-center w-fit">
 READ OUR CASE
 <ChevronRight size={16}/>
 </button>
+</a>
 
 </div>
 

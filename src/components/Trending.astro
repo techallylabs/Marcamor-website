@@ -1,4 +1,6 @@
 ---
+import { ChevronRight, Clock3, CalendarDays } from "lucide-react";
+
 const cards = [
 {
 image:"/images/insights1.svg",
@@ -8,143 +10,206 @@ date:" mar 07, 2025",
 time:"4 MIN",
 dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
 }
-]
+];
 
 const cards1 = [
 {
 image:"/images/insights2.svg",
 title:"The Rise of Performance Driven Marketing in Modern Businesses",
-type:" Marketing",
-date:" mar 07, 2025",
-time:"4 MIN",
-dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+type:" Marketing"
 },
 {
 image:"/images/insights3.svg",
 title:"Why Companies Are Investing More in Brand Strategy",
-type:" Business",
-date:" mar 07, 2025",
-time:"4 MIN",
-dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+type:" Business"
 },
 {
 image:"/images/insights4.svg",
 title:"How AI Is Changing Digital Marketing Workflows",
-type:" Technology",
-date:" mar 07, 2025",
-time:"4 MIN",
-dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+type:" Technology"
 },
 {
 image:"/images/insights9.svg",
 title:"Why Customer Experience Is Becoming the Real Competitive Advantage",
-type:" Business",
-date:" mar 07, 2025",
-time:"4 MIN",
-dec:"Many businesses believe growth comes from increasing marketing budgets. In reality, growth comes from clarity. When positioning, messaging, and audience alignment are defined correctly, marketing becomes far more effective and scalable."
+type:" Business"
 }
-]
+];
+
+const posts = [
+{
+image: "/images/insights5.svg",
+title: "Why Branding Is a Long Term Business Asset",
+type: "Branding",
+date: "Mar 07, 2025",
+time: "15 min",
+},
+{
+image: "/images/insights6.svg",
+title: "Understanding the Difference Between Traffic and Revenue Growth",
+type: "Marketing",
+date: "Mar 07, 2025",
+time: "20 min",
+},
+{
+image: "/images/insights7.svg",
+title: "How Digital Infrastructure Impacts Business Scalability",
+type: "Business",
+date: "Mar 07, 2025",
+time: "30 min",
+},
+{
+image: "/images/insights8.svg",
+title: "Why Businesses Are Rebuilding Their Digital Platforms",
+type: "Technology",
+date: "Mar 07, 2025",
+time: "40 min",
+},
+];
 ---
 
-<section class="bg-black text-white py-[60px] mt-20">
+<section class="bg-black text-white mt-20 border-t border-white/10 border-b border-white/10">
 
-<div class="max-w-[1440px] mx-auto w-[90%]">
+<div class="max-w-[1440px] mx-auto w-[90%] py-[60px]">
 
-<div class="flex flex-col lg:flex-row justify-center gap-12 lg:gap-[76px]">
+<!-- HEADER -->
+<div class="flex justify-between items-center mb-10 ">
 
+<div class="relative">
+<img src="/images/marcamore-logo.svg" class="w-[120px]" />
+<img src="/images/insight-logo.svg" class="w-[90px] absolute top-[22px] left-[0]" />
+</div>
 
-<div class="w-full lg:w-[745px]">
+<button class="h-[32px] px-4 rounded-full text-[10px] uppercase font-semibold bg-gradient-to-r from-[#EE5125] to-[#E51F31] flex items-center gap-2 text-white">
+VISIT INSIGHTS
+<ChevronRight size={14}/>
+</button>
+
+</div>
+<div class="border-b border-white/10 mb-10"></div>
+<div class="flex flex-col lg:flex-row gap-[60px]">
+
+<!-- LEFT -->
+<div class="lg:w-[65%]">
 
 {cards.map((item)=>(
+
 <div>
 
-<div class="w-full h-[240px] sm:h-[320px] lg:h-[410px] rounded-2xl">
-
-<img src={item.image} alt={item.image} class="rounded-[10px]" />
-
+<div class="w-full h-[420px] rounded-[14px] overflow-hidden">
+<img src={item.image} class="w-[745px] h-[450px] object-cover"/>
 </div>
 
-<div class="flex flex-wrap items-center gap-3 mt-6 text-sm font-semibold">
+<div class="flex gap-2 mt-5">
 
-<span class="bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-xs uppercase">
-{item.type}
-</span>
+<span class="bg-white/10 border border-white/10 px-3 py-1 rounded-full text-[10px] uppercase">{item.type}</span>
 
-<span class="flex items-center gap-2 bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-xs text-white/70">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-<circle cx="7" cy="7" r="6"/>
-<path d="M7 3v4l2 2"/>
-</svg>
-
+<span class="bg-white/10 border border-white/10 px-3 py-1 rounded-full text-[10px] flex items-center gap-1">
+<Clock3 size={10}/>
 {item.time}
-
 </span>
 
-<span class="flex items-center uppercase gap-2 bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-xs text-white/70">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-<rect x="2" y="3" width="10" height="9" rx="2"/>
-<path d="M2 6h10"/>
-</svg>
-
+<span class="bg-white/10 border border-white/10 px-3 py-1 rounded-full text-[10px] flex items-center gap-1">
+<CalendarDays size={10}/>
 {item.date}
-
 </span>
 
 </div>
 
-
-<h2 class="text-[18px] font-semibold mt-4 leading-snug">
+<h2 class="text-[20px] font-semibold mt-4  leading-snug">
 {item.title}
 </h2>
 
-
-<p class="text-[#FFFFFF80] text-[14px] mt-4 leading-relaxed">
+<p class="text-white/60 text-[13px] mt-3 leading-[1.6] max-w-[90%]">
 {item.dec}
 </p>
 
 </div>
+
 ))}
 
 </div>
 
-
+<!-- DIVIDER -->
 <div class="hidden lg:block w-px bg-white/10"></div>
 
+<!-- RIGHT -->
+<div class="lg:w-[35%]">
 
-<div class="w-full lg:w-[600px]">
-
-<h3 class="text-sm tracking-wider text-white/50 mb-6">
+<p class="text-[11px] text-white/30 mb-6 tracking-widest">
 TRENDING
-</h3>
-
+</p>
 
 {cards1.map((ele)=>(
-<div class="flex gap-4 mb-8">
 
-<div class="w-[130px] rounded-lg flex-shrink-0">
+<div class="flex gap-4 pb-6 mb-6 border-b border-white/10 last:border-none last:mb-0">
 
-<img src={ele.image} class="rounded-[10px]" />
-
+<div class="w-[120px] h-[75px] rounded-md overflow-hidden flex-shrink-0">
+<img src={ele.image} class="w-full h-full object-cover"/>
 </div>
 
 <div>
 
-<span class="bg-[#FFFFFF40] px-[12px] py-[6px] rounded-full text-[10px] uppercase font-semibold">
+<span class="bg-white/10 border border-white/10 px-2 py-1 text-[10px] rounded-full font-semibold text-[9px] uppercase">
 {ele.type}
 </span>
 
-<h4 class="text-[14px] font-semibold mt-3 leading-snug">
+<h4 class="text-[13px] font-medium mt-2 text-[10px] font-semibold leading-snug">
 {ele.title}
 </h4>
 
 </div>
 
 </div>
+
 ))}
 
 </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOTTOM -->
+<section class="bg-black text-white border-t border-white/10">
+
+<div class="max-w-[1440px] mx-auto w-[90%] py-[60px]">
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+{posts.map((post)=>(
+
+<article class="space-y-4 cursor-pointer group">
+
+<div class="w-full aspect-[16/10] rounded-[8px] overflow-hidden">
+<img src={post.image} class="w-full h-full object-cover"/>
+</div>
+
+<div class="flex gap-2 flex-wrap text-[9px]">
+
+<span class="bg-white/10 border border-white/10 px-2 py-1 rounded-full text-[10px] font-semibold uppercase">{post.type}</span>
+
+<span class="bg-white/10 border border-white/10 px-2 py-1 text-[10px] font-semibold rounded-full flex items-center gap-1">
+<Clock3 size={10}/>
+{post.time}
+</span>
+
+<span class="bg-white/10 border border-white/10 px-2 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1">
+<CalendarDays size={10}/>
+{post.date}
+</span>
+
+</div>
+
+<h3 class="text-[13px] leading-snug group-hover:text-[#F05623] transition">
+{post.title}
+</h3>
+
+</article>
+
+))}
 
 </div>
 

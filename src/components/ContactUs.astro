@@ -1,260 +1,233 @@
 ---
-const contactImage = "/images/contact-logos.svg"
+const contactImage = "/images/contact-logos.svg";
+
+import { PhoneCall, Mail, ChevronDown } from "lucide-react";
 ---
 
 <section class="bg-[#FFF9F6] text-black pb-20 py-10 lg:py-20">
 
-<div class="max-w-[1440px] mx-auto w-[90%]">
+  <div class="max-w-[1440px] mx-auto w-[90%]">
 
-<div class="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-16 lg:gap-[130px]">
+    <div class="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-16 lg:gap-[130px]">
 
+      <!-- LEFT -->
+      <div class="bg-white rounded-[14px] p-6 md:p-[44px] shadow-sm relative flex flex-col justify-between min-h-[600px]">
 
-<div class="bg-white rounded-[14px] p-6 md:p-[44px] shadow-sm relative flex flex-col justify-between min-h-[600px]">
+        <div>
+          <span class="inline-block text-[13px] font-medium bg-black/5 px-4 py-2 rounded-full mb-6">
+            Let's Talk
+          </span>
 
-<div>
+          <h2 class="lg:text-[30px] text-[20px] font-semibold mb-5 leading-tight">
+            Start the Conversation
+          </h2>
 
-<span class="inline-block text-[13px] font-medium bg-black/5 px-4 py-2 rounded-full mb-6">
-Let's Talk
-</span>
+          <p class="text-[16px] text-black/60 leading-[1.6] max-w-[300px] mb-8">
+            We collaborate with growth-focused businesses ready to build structured, scalable, and market-defining brands.
+          </p>
+        </div>
 
-<h2 class="lg:text-[30px] text-[20px] font-semibold mb-5 leading-tight">
-Start the Conversation
-</h2>
+        <!-- CONTACT -->
+        <div class="flex flex-col gap-3">
 
-<p class="text-[16px] text-black/60 leading-[1.6] max-w-[300px] mb-8">
-We collaborate with growth-focused businesses ready to build structured, scalable, and market-defining brands. Share your vision, and our team will evaluate how we can support your next phase of expansion.
-</p>
+          <h3 class="text-[17px] font-semibold">Or, Call Us at</h3>
 
-</div>
+          <a href="tel:+919985202223" class="flex items-center gap-2 text-[14px] font-semibold text-[#E74C3C]">
+            <PhoneCall size={14} />
+            +91 99852 02223
+          </a>
 
-<div class="flex flex-col gap-3">
+          <a href="mailto:info@marcamor.com" class="flex items-center gap-2 text-[14px] font-semibold text-[#E74C3C]">
+            <Mail size={14} />
+            info@marcamor.com
+          </a>
 
-<h3 class="text-[17px] font-semibold">
-Or, Call Us at
-</h3>
+        </div>
 
-<a
-href="tel:+919985202223"
-class="flex items-center gap-2 text-[14px] font-semibold text-[#E74C3C] hover:opacity-80 transition"
->
+        <img src={contactImage} class="absolute bottom-6 right-6 w-[143px] h-[143px]" />
 
-<svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M22 16.92V21a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3 6.18 2 2 0 0 1 5 4h4.09a2 2 0 0 1 2 1.72l.45 3a2 2 0 0 1-.55 1.73L9.91 11a16 16 0 0 0 6.09 6.09l.55-.55a2 2 0 0 1 1.73-.55l3 .45A2 2 0 0 1 22 16.92z"/>
-</svg>
+      </div>
 
-+91 99852 02223
+      <!-- FORM -->
+      <form class="space-y-2 md:space-y-6 max-[375px]:space-y-4">
 
-</a>
+        <!-- NAME + EMAIL -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
+          <div>
+            <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+              Full Name <span class="text-[#EE5125] ml-1">*</span>
+            </label>
+            <input class="w-full h-[44px] rounded-lg bg-[#0000000D] px-4" />
+          </div>
 
-<a
-href="mailto:info@marcamor.com"
-class="flex items-center gap-2 text-[14px] font-semibold text-[#E74C3C] hover:opacity-80 transition"
->
+          <div>
+            <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+              Email <span class="text-[#EE5125] ml-1">*</span>
+            </label>
+            <input class="w-full h-[44px] rounded-lg bg-[#0000000D] px-4" />
+          </div>
 
-<svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
-<path d="M4 4h16v16H4z"/>
-<path d="M22 6l-10 7L2 6"/>
-</svg>
+        </div>
 
-info@marcamor.com
+        <!-- PHONE + SERVICE -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
-</a>
+          <!-- PHONE -->
+          <div>
+            <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+              Phone Number <span class="text-[#EE5125] ml-1">*</span>
+            </label>
 
-</div>
+            <div class="flex items-center h-[44px] rounded-lg bg-[#0000000D] px-3 gap-2">
 
+  <!-- FLAG -->
+  <img src="https://flagcdn.com/w20/in.png" class="w-[18px] h-[12px]" />
 
-<img
-src={contactImage}
-class="absolute bottom-6 right-6 w-[143px] h-[143px] pointer-events-none"
-/>
+  <!-- COUNTRY CODE DROPDOWN -->
+  <div class="relative">
 
-</div>
+    <select
+      class="appearance-none bg-transparent text-[14px] font-medium pr-2 outline-none cursor-pointer"
+    >
+      <option value="+91">+91 (IN)</option>
+      <option value="+1">+1 (US)</option>
+      <option value="+44">+44 (UK)</option>
+      <option value="+61">+61 (AU)</option>
+      <option value="+971">+971 (UAE)</option>
+    </select>
 
+    <!-- ICON -->
+    <div class="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+      <ChevronDown size={14} class="text-black/50" />
+    </div>
 
+  </div>
 
-<form class="space-y-2 md:space-y-6 max-[375px]:space-y-4">
+  <!-- SEPARATOR -->
+  <span class="text-black/40">|</span>
 
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-[375px]:gap-3">
-
-<div>
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-First Name
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
-
-<input
-class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4 focus:outline-none focus:ring-2 focus:ring-black/20"
-/>
-
-</div>
-
-
-<div>
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-Email
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
-
-<input
-class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4 focus:outline-none focus:ring-2 focus:ring-black/20"
-/>
-
-</div>
-
-</div>
-
-
-
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-[375px]:gap-3">
-
-<div>
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-Phone Number
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
-
-<input
-class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4 focus:outline-none focus:ring-2 focus:ring-black/20"
-/>
+  <!-- INPUT -->
+  <input
+    type="tel"
+    placeholder="Enter phone number"
+    class="flex-1 bg-transparent outline-none text-[14px]"
+  />
 
 </div>
+          </div>
 
+          <!-- SERVICE -->
+          <div>
+            <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+              What services are you looking for? <span class="text-[#EE5125] ml-1">*</span>
+            </label>
 
-<div>
+            <div class="relative">
 
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-What services are you looking for?
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
+              <select class="w-full h-[44px] rounded-lg bg-[#0000000D] px-4 pr-10 appearance-none">
+                <option>Please Select</option>
+              </select>
 
-<select class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4">
+              <!-- DROPDOWN ICON -->
+              <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                <ChevronDown size={16} class="text-black/50" />
+              </div>
 
-<option>Please Select</option>
-<option>Web Design</option>
-<option>Marketing</option>
-<option>Branding</option>
+            </div>
+          </div>
 
-</select>
+        </div>
 
-</div>
+        <!-- COUNTRY + CITY -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
 
-</div>
+          <div>
+            <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+              Country <span class="text-[#EE5125] ml-1">*</span>
+            </label>
 
+            <div class="relative">
 
+              <select class="w-full h-[44px] rounded-lg bg-[#0000000D] px-4 pr-10 appearance-none">
+                <option>Please Select</option>
+                <option>India</option>
+                <option>United States
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-[375px]:gap-3">
+</option>
+                <option>United Kingdom</option>
+              </select>
 
+              <div class="absolute right-3 top-1/2 -translate-y-1/2">
+                <ChevronDown size={16} class="text-black/50" />
+              </div>
 
-<div>
+            </div>
+          </div>
 
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-Country
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
+          <div>
+            <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+              City <span class="text-[#EE5125] ml-1">*</span>
+            </label>
 
-<select class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4">
+            <input
+              type="text"
+              placeholder="Please Select"
+              class="w-full h-[44px] rounded-lg bg-[#0000000D] px-4"
+            />
+          </div>
 
-<option>Please Select</option>
+        </div>
 
-</select>
+        <!-- BUDGET -->
+        <div>
+          <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+            What is your budget? <span class="text-[#EE5125] ml-1">*</span>
+          </label>
 
-</div>
+          <div class="relative">
 
+            <select class="w-full h-[44px] rounded-lg bg-[#0000000D] px-4 pr-10 appearance-none">
+              <option>Please Select</option>
+            </select>
 
-<div>
+            <div class="absolute right-3 top-1/2 -translate-y-1/2">
+              <ChevronDown size={16} class="text-black/50" />
+            </div>
 
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-City
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
+          </div>
+        </div>
 
-<select class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4">
+        <!-- MESSAGE -->
+        <div>
+          <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+            Tell us more about your project <span class="text-[#EE5125] ml-1">*</span>
+          </label>
 
-<option>Please Select</option>
+          <textarea class="w-full min-h-[120px] rounded-lg bg-[#0000000D] px-4 py-3"></textarea>
+        </div>
 
-</select>
+        <!-- FILE -->
+        <div>
+          <label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
+            File upload
+          </label>
 
-</div>
+          <input
+            type="file"
+            class="w-full file:px-3 file:py-1.5 file:rounded file:border file:bg-[#0000000D]"
+          />
+        </div>
 
-</div>
+        <!-- BUTTON -->
+        <button class="w-full h-[48px] rounded-lg bg-gradient-to-r from-[#E51F31] to-[#EE5125] text-white font-semibold">
+          Submit
+        </button>
 
+      </form>
 
+    </div>
 
-<div>
-
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-What is your budget?
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
-
-<select class="w-full h-[44px] rounded-lg bg-[#0000000D] border-none px-4">
-
-<option>Please Select</option>
-
-</select>
-
-</div>
-
-
-
-<div>
-
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-Tell us more about your project
-<span class="text-[#EE5125] ml-1">*</span>
-</label>
-
-<textarea
-class="w-full min-h-[120px] rounded-lg bg-[#0000000D] border border-black/10 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black/20 resize-none">
-</textarea>
-
-</div>
-
-
-
-<div>
-
-<label class="block text-[14px] font-medium mb-2 text-[#7f7c7b]">
-File upload
-</label>
-
-<input
-type="file"
-class="
-w-full
-file:mr-2
-file:px-3
-file:py-1.5
-file:rounded-[4px]
-file:border
-file:border-[#000000]
-file:bg-[#0000000D]
-file:text-black
-file:text-sm
-hover:file:bg-black/5
-"
-/>
-
-</div>
-
-
-
-<button
-type="submit"
-class="w-full h-[48px] rounded-lg bg-gradient-to-r from-[#E51F31] to-[#EE5125] text-white font-semibold hover:opacity-90 transition"
->
-
-Submit
-
-</button>
-
-
-</form>
-
-</div>
-
-</div>
+  </div>
 
 </section>

@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import CustomHero from "../../../components/services/custom-web-app-design/CustomHero.astro";
+import CustomMarquee from "../../../components/services/custom-web-app-design/Marquee.astro";
+import CustomServices from "../../../components/services/custom-web-app-design/OurServices.astro";
+import CustomStrategy from "../../../components/services/custom-web-app-design/TurningStrategy.astro";
+import CustomCategory from "../../../components/services/custom-web-app-design/Category.jsx";
+import CustomWhyChoose from "../../../components/services/custom-web-app-design/WhyChooseMarcamor.astro";
+import CustomFaq from "../../../components/services/custom-web-app-design/CustomFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Custom Web and App Design Services">
+
+<CustomHero />
+
+<CustomMarquee />
+
+<CustomServices />
+
+<CustomStrategy />
+
+<CustomCategory client:load />
+
+<CustomWhyChoose />
+
+<CustomFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

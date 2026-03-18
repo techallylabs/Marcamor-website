@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import ProcessHero from "../../../components/services/business-process-optimization/ProcessHero.astro";
+import ProcessMarquee from "../../../components/services/business-process-optimization/Marquee.astro";
+import ProcessServices from "../../../components/services/business-process-optimization/OurServices.astro";
+import ProcessStrategy from "../../../components/services/business-process-optimization/TurningStrategy.astro";
+import ProcessCategory from "../../../components/services/business-process-optimization/Category.jsx";
+import ProcessWhyChoose from "../../../components/services/business-process-optimization/WhyChooseMarcamor.astro";
+import ProcessFaq from "../../../components/services/business-process-optimization/ProcessFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Business Process Optimization Consulting">
+
+<ProcessHero />
+
+<ProcessMarquee />
+
+<ProcessServices />
+
+<ProcessStrategy />
+
+<ProcessCategory client:load />
+
+<ProcessWhyChoose />
+
+<ProcessFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

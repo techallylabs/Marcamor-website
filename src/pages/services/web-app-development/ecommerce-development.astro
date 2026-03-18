@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import EcommerceHero from "../../../components/services/ecommerce-development/EcommerceHero.astro";
+import EcommerceMarquee from "../../../components/services/ecommerce-development/Marquee.astro";
+import EcommerceServices from "../../../components/services/ecommerce-development/OurServices.astro";
+import EcommerceStrategy from "../../../components/services/ecommerce-development/TurningStrategy.astro";
+import EcommerceCategory from "../../../components/services/ecommerce-development/Category.jsx";
+import EcommerceWhyChoose from "../../../components/services/ecommerce-development/WhyChooseMarcamor.astro";
+import EcommerceFaq from "../../../components/services/ecommerce-development/EcommerceFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="E-commerce Development Services">
+
+<EcommerceHero />
+
+<EcommerceMarquee />
+
+<EcommerceServices />
+
+<EcommerceStrategy />
+
+<EcommerceCategory client:load />
+
+<EcommerceWhyChoose />
+
+<EcommerceFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

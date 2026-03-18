@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import DevHero from "../../../components/services/web-app-development/DevHero.astro";
+import DevMarquee from "../../../components/services/web-app-development/Marquee.astro";
+import DevServices from "../../../components/services/web-app-development/OurServices.astro";
+import DevStrategy from "../../../components/services/web-app-development/TurningStrategy.astro";
+import DevCategory from "../../../components/services/web-app-development/Category.jsx";
+import DevWhyChoose from "../../../components/services/web-app-development/WhyChooseMarcamor.astro";
+import DevFaq from "../../../components/services/web-app-development/DevFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Website and App Development Services">
+
+<DevHero />
+
+<DevMarquee />
+
+<DevServices />
+
+<DevStrategy />
+
+<DevCategory client:load />
+
+<DevWhyChoose />
+
+<DevFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>

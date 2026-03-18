@@ -4,8 +4,12 @@ import ServicesMegaMenu from "./ServicesMegaMenu";
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
 
+  // ✅ Set active path ON LOAD
   useEffect(() => {
+    setActive(window.location.pathname);
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -14,27 +18,74 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  const isActive = (path) => active === path;
+
+
+  const activeClass =
+    "px-[18px] py-[6px] rounded-full bg-[#FFFFFF40] text-white backdrop-blur-md";
+  const normalClass =
+    "px-4 py-[10px] text-white hover:text-white transition-all";
+
   return (
     <nav
       className={`sticky top-0 z-50 w-full h-[94px] transition-all duration-300 ${
-        isScrolled ? "bg-black/35 backdrop-blur-[54px]" : "bg-black"
+        isScrolled ? "bg-black/20 backdrop-blur-[54px]" : "bg-black"
       }`}
     >
       <div className="max-w-[90%] mx-auto w-full h-full flex items-center justify-between">
 
-        <img src="/images/marcamore-logo.svg" alt="marcamore logo" className="h-12 w-auto" />
+        {/* LOGO */}
+        <a href="/">
+          <img
+            src="/images/marcamore-logo.svg"
+            alt="marcamore logo"
+            className="h-12 w-auto"
+          />
+        </a>
 
+        {/* DESKTOP MENU */}
         <div className="hidden xl:flex items-center gap-10">
-          <div className="flex items-center gap-10 text-[16px] font-medium text-white">
+          <div className="flex items-center gap-4 text-[16px] font-medium text-white">
 
-            <a href="/" className="hover:text-gray-300 font-semibold">Home</a>
+            {/* HOME */}
+            <a href="/" className={isActive("/") ? activeClass : normalClass}>
+              Home
+            </a>
 
             <ServicesMegaMenu />
 
-            <a href="/about" className="hover:text-gray-300 font-semibold">About Us</a>
-            <a href="/work" className="hover:text-gray-300 font-semibold">Work</a>
-            <a href="/contact" className="hover:text-gray-300 font-semibold">Contact</a>
-            <a href="/franchising" className="hover:text-gray-300 font-semibold">Franchising</a>
+            {/* ABOUT */}
+            <a
+              href="/about"
+              className={isActive("/about") ? activeClass : normalClass}
+            >
+              About Us
+            </a>
+
+            {/* WORK */}
+            <a
+              href="/work"
+              className={isActive("/work") ? activeClass : normalClass}
+            >
+              Work
+            </a>
+
+            {/* CONTACT */}
+            <a
+              href="/contact"
+              className={isActive("/contact") ? activeClass : normalClass}
+            >
+              Contact
+            </a>
+
+            {/* FRANCHISING */}
+            <a
+              href="/franchising"
+              className={isActive("/franchising") ? activeClass : normalClass}
+            >
+              Franchising
+            </a>
 
           </div>
 
@@ -47,6 +98,7 @@ function Navbar() {
           </a>
         </div>
 
+        {/* MOBILE MENU ICON */}
         <div className="xl:hidden z-50">
           <img
             src="/images/menu1.svg"
@@ -57,6 +109,7 @@ function Navbar() {
         </div>
       </div>
 
+      {/* MOBILE MENU */}
       <div
         className={`xl:hidden bg-black text-white transition-all duration-300 overflow-hidden ${
           open ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
@@ -79,8 +132,9 @@ function Navbar() {
         </div>
       </div>
 
+      {/* BADGE */}
       <div className="absolute right-[4%] top-[94px] z-40">
-        <img src="/images/Insights.svg" alt="Insights badge" className="w-[112px] h-[58px]" />
+        <img src="/images/Insights.svg" className="w-[112px] h-[58px]" />
       </div>
 
     </nav>

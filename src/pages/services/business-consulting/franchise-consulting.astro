@@ -1,0 +1,36 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+import FranchiseHero from "../../../components/services/franchise-consulting/FranchiseHero.astro";
+import FranchiseMarquee from "../../../components/services/franchise-consulting/Marquee.astro";
+import FranchiseServices from "../../../components/services/franchise-consulting/OurServices.astro";
+import FranchiseStrategy from "../../../components/services/franchise-consulting/TurningStrategy.astro";
+import FranchiseCategory from "../../../components/services/franchise-consulting/Category.jsx";
+import FranchiseWhyChoose from "../../../components/services/franchise-consulting/WhyChooseMarcamor.astro";
+import FranchiseFaq from "../../../components/services/franchise-consulting/FranchiseFaq.jsx";
+
+import ContactUs from "../../../components/ContactUs.astro";
+import FooterSection from "../../../components/FooterSection.astro";
+---
+
+<Layout title="Franchise Consulting Services">
+
+<FranchiseHero />
+
+<FranchiseMarquee />
+
+<FranchiseServices />
+
+<FranchiseStrategy />
+
+<FranchiseCategory client:load />
+
+<FranchiseWhyChoose />
+
+<FranchiseFaq client:load />
+
+<ContactUs />
+
+<FooterSection />
+
+</Layout>
